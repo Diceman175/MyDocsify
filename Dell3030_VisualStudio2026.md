@@ -1,6 +1,6 @@
-# Dell3030 Visual Studio 2026
+# Dell3030 | Visual Studio 2026 | Installation & Configuration Notes
 
-[Dell3030](DELL3030.md)
+[DELL3030](DELL3030.md)
 
 ## Extension tips
 

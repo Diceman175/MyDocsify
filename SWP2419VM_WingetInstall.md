@@ -1,3 +1,7 @@
+# SWP2419VM | WinGet | Installation & Configuration Notes
+
+* [SWP2419VM](SWP2419VM.md)
+
 Go to Control Panel > Terminal & SNMP > Terminal then enable SSH service.
 Go to Control Panel > Shared Folder and create a shared folder for Git repositories.
 

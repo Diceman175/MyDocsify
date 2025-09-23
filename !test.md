@@ -17,7 +17,7 @@ This is a test file to demonstrate how to create and format a markdown document.
          - Subitem 2.1
          - Subitem 2.2
 
-[test-pdf](./PDF_files/test.pdf)
+[test-pdf](PDF_files/test.pdf)
 
 ### End of File
 

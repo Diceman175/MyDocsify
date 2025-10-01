@@ -1,6 +1,6 @@
 - [Read Me](README)
 - [!test](!test.md)
 - [Example Second Page](second-page)
-- [dell3030](Dell3030.md)
-- [swp2419vm](Swp2419.md)
+- [Navbar](_navbar.md)
+- [Sidebar](_side.md)
 - [SWP918](swp918.md)

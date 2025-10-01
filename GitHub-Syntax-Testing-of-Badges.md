@@ -1,23 +1,41 @@
 # GitHub Syntax Testing of Badges
+<!-- badges: start -->
+![](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+<!-- badges: end -->
 
-Testing page for badges
+Testing page for badges.
 
 ## Badges
 
 - [Creating custom badges](https://tomsing1.github.io/blog/posts/custom-badges/)
 - [Badges 4 readme.md](https://github.com/alexandresanlim/Badges4-README.md-Profile)
 
-### Working Sample
+### Working Samples
 
-Static badge sample
+#### Static badges
 <!-- badges: start -->
-![Static Badge](https://img.shields.io/badge/any_text-you_like-blue)
+![Static Badge](https://img.shields.io/badge/any_text-Static_text_I_want_to_display-greeen)
 <!-- badges: end -->
 
-My Working Dynamic badge sample.  Does it looks at a public GitHub Site and reflects the last commit date
+#### Dynamic badges
 <!-- badges: start -->
-![](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub Created At](https://img.shields.io/github/created-at/diceman175/mydocsify)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/diceman175/mydocsify/main)
+![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
+![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
 <!-- badges: end -->
+
+This only works with a Publc Repo.
+As per these 3 links shields.oi can NOT be used on a private repo.  
+
+- [5917](https://github.com/badges/shields/discussions/5917)
+- [593](https://github.com/badges/shields/issues/593)
+- [5676](https://github.com/badges/shields/discussions/5676)
+
+```text
+GET /github/last-commit/:user/:repo
+```
 
 | Badge                                                                                                                            | URL                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|

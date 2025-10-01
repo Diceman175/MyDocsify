@@ -4,8 +4,8 @@
 
 - [Read Me](README.md)
 
-- [Test](./test.mdtest.md)
-- [Example Second Page](second-page.mdsecond-page)
+- [Test](./test.md)
+  - [Example Second Page](second-page.md)
 - [Navbar](_navbar.md)
 - [Sidebar](_side.md)
-- [SWP918](swp918.md)
+- [GitHub Syntax Testing of Badges](GitHub-Syntax-Testing-of-Badges.md)

@@ -1,6 +1,6 @@
 # Docsify Template
 
-A simple Docsify site [My Dieman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)
+A simple Docsify site [My Diceman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)
 
 > Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
 

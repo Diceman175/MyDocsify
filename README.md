@@ -1,7 +1,8 @@
 # Docsify Template
-
 <!-- badges: start -->
-![](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
+![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
 <!-- badges: end -->
 
 A simple Docsify site [My Diceman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)

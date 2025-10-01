@@ -1,10 +1,14 @@
 # Docsify Template
 
+<!-- badges: start -->
+![](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+<!-- badges: end -->
+
 A simple Docsify site [My Diceman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)
 
 > Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
 
-emplate for creating Markdown-based documentation sites, with no build process required.
+Template for creating Markdown-based documentation sites, with no build process required.
 
 ## Site Setup
 

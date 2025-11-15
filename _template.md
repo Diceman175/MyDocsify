@@ -1,0 +1,97 @@
+# Template
+
+| Title               | Status               | Category |
+|---------------------|----------------------|----------|
+| Definition Template | Feedback Appreciated | concept  |
+
+
+<a id="TOC"></a> Table of Contents
+
+- [Template](#template)
+  - [Reference Links](#reference-links)
+  - [Table Template](#table-template)
+  - [Problem it addresses](#problem-it-addresses)
+  - [How it helps](#how-it-helps)
+  - [Related terms](#related-terms)
+  - [Download](#download)
+  - [Introduction](#introduction)
+  - [Introduction](#introduction-1)
+
+## Reference Links
+
+[TOC](#TOC) | [Master Index](./anthology-master-list_how-to-install-and-config.md) | [README]
+
+This is a [reference link][1].
+This is another [reference link][link-name].
+
+[1]: https://www.example.com
+[link-name]: https://www.google.com "Google Search"
+
+## Table Template
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Left     | Center   | Right    |
+
+**Table 1:** Sample Table
+
+---
+
+Quick summary of the concept and what it is.
+
+## Problem it addresses
+
+Define the problem it addresses. Ideally, don't even mention the term you are defining. 
+
+## How it helps
+
+Describe how the term addresses the problem described above.
+
+## Related terms
+
+```mermaid
+stateDiagram
+    [*] --> First
+    state First {
+        [*] --> second
+        second --> [*]
+    }
+```
+
+Download
+--------
+
+[Markdown 1.0.1][dl] (18 KB) -- 17 Dec 2004
+
+[dl]: http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
+
+
+Introduction
+------------
+
+[Syntax][s_src] and [License][l_src] pages.)
+
+  [s_src]: /projects/markdown/syntax.text
+  [l_src]: /projects/markdown/license.text
+
+
+[Download 1.0][dl] (18 KB) -- 17 Dec 2004 md5: a215c2ad7eedd89cb63cf51c765fb493
+
+[dl]: http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
+
+
+Introduction
+------------
+
+Markdown is a text-to-HTML conversion tool for web writers. Markdown
+allows you to write using an easy-to-read, easy-to-write plain text
+format, then convert it to structurally valid HTML.
+
+Thus, "Markdown" is two things: (1) a plain text formatting syntax;
+and (2) a software tool, written in Perl, that converts the plain text
+formatting to HTML. See the [Syntax][] page for details pertaining to
+Markdown's formatting syntax. You can try it out, right now, using the
+online [Dingus][].
+
+  [syntax]: /projects/markdown/syntax
+  [dingus]: /projects/markdown/dingus

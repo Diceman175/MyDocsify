@@ -7,13 +7,25 @@
 
 A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
 
-Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/).  
+> Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
+> 
 I am using this to test html and markdown creation formatting for documentation purpose.  
 This template is used for creating Markdown-based documentation sites, with no build process required.
+
+## MD Sample Files
+
+- [GitHub-Syntax-Testing-of-Badges](GitHub-Syntax-Testing-of-Badges.md)
+- [Sample](Sample.md)
+- [_Template.md](./_template.md)
+- [_navbar.md](_navbar.md)
+- [_sidebar](_sidebar.md)
+- [second-page](second-page.md)
+- [test](test.md)
 
 ## Site Setup
 
 ### Static Webserver
+
 Upload these template files to any static web server. The file `.nojekyll` is only required if hosting the site on GitHub Pages and otherwise can be removed.
 
 ### GitHub Pages

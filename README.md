@@ -5,11 +5,11 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
 <!-- badges: end -->
 
-A simple Docsify site [My Diceman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)
+A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
 
-> Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
-
-Template for creating Markdown-based documentation sites, with no build process required.
+> Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/).  
+I am using this to test html and markdown creation formatting for documentation purpose. 
+This template is used for creating Markdown-based documentation sites, with no build process required.
 
 ## Site Setup
 

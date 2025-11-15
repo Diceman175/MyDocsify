@@ -4,7 +4,7 @@
 
 - [Read Me](README.md)
 
-- [Test](./test.md)
+- [Test](test.md)
   - [Example Second Page](second-page.md)
 - [Navbar](_navbar.md)
 - [Sidebar](_sidebar.md)

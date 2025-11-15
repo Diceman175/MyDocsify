@@ -27,6 +27,7 @@ This is another [reference link][link-name].
 [1]: https://www.example.com
 [link-name]: https://www.google.com "Google Search"
 
+
 ## Table Template
 
 | Column 1 | Column 2 | Column 3 |
@@ -34,6 +35,10 @@ This is another [reference link][link-name].
 | Left     | Center   | Right    |
 
 **Table 1:** Sample Table
+
+[tbl](#table-template)
+
+ [d_tbl1]:
 
 ---
 
@@ -94,4 +99,4 @@ Markdown's formatting syntax. You can try it out, right now, using the
 online [Dingus][].
 
   [syntax]: /projects/markdown/syntax
-  [dingus]: /projects/markdown/dingus
+  [dingus]: /Sample.md

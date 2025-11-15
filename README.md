@@ -16,7 +16,7 @@ This template is used for creating Markdown-based documentation sites, with no b
 
 - [GitHub-Syntax-Testing-of-Badges](GitHub-Syntax-Testing-of-Badges.md)
 - [Sample](Sample.md)
-- [_Template.md](./_template.md)
+- [template.md](./template.md)
 - [_navbar.md](_navbar.md)
 - [_sidebar](_sidebar.md)
 - [second-page](second-page.md)

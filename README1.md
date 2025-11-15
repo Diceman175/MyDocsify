@@ -1,0 +1,67 @@
+# Docsify Template
+<!-- badges: start -->
+![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
+![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
+<!-- badges: end -->
+
+
+A simple Docsify site [My Diceman175 Newbie Tips](https://diceman175.github.io/MyDocsify/#/)
+
+> Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
+
+Template for creating Markdown-based documentation sites, with no build process required.
+
+## Site Setup
+
+### Static Webserver
+Upload these template files to any static web server. The file `.nojekyll` is only required if hosting the site on GitHub Pages and otherwise can be removed.
+
+### GitHub Pages
+
+#### Hosting Site
+
+To host this template on GitHub Pages do the following:  
+
+1. Log into GitHub if you have not done so already
+2. Tap the **Use this template** button in the upper-right of this GitHub Repository and choose **Create a new repository**
+3. Enter a name for your new Repository and then tap the **Create repository** button
+4. Once your new Repostitory is created go to **Settings**, then select **Pages** from the left-hand sidebar, and under **Branch** choose **main** and then tap the **Save** button
+5. Wait a minute or two and refresh the same **Pages** page - once your site is ready a message will be displayed at the top of the screen along with a site link and a **Visit site** button
+
+#### Editing Content
+
+How about editing the content of your new Docsify site on GitHub Pages? View the Markdown page you want to edit (for example, **README.md**) and tap the **Pencil Icon**, then save any changes by tapping the green **Commit changes...** button. In just a few moments the Docsify site will be automatically updated to reflect those changes.
+
+### Viewing Locally 
+Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users) in the repo folder to serve run locally.
+
+## Docsify Documentation
+
+To learn more about using Docsify, visit https://docsify.js.org.
+
+Section (larger font) Header with 
+---
+
+--------
+
+[Download 1.0][dl] (18 KB) -- 17 Dec 2004 md5: a215c2ad7eedd89cb63cf51c765fb493
+
+[dl]: http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
+
+
+Introduction
+------------
+
+Markdown is a text-to-HTML conversion tool for web writers. Markdown
+allows you to write using an easy-to-read, easy-to-write plain text
+format, then convert it to structurally valid HTML.
+
+Thus, "Markdown" is two things: (1) a plain text formatting syntax;
+and (2) a software tool, written in Perl, that converts the plain text
+formatting to HTML. See the [Syntax][] page for details pertaining to
+Markdown's formatting syntax. You can try it out, right now, using the
+online [Dingus][].
+
+  [syntax]: /projects/markdown/syntax
+  [dingus]: /projects/markdown/dingus

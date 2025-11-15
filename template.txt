@@ -1,1 +1,2 @@
-template
+
+This is a test .TXT file to see how it renders

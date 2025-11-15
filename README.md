@@ -21,6 +21,7 @@ This template is used for creating Markdown-based documentation sites, with no b
 - [_sidebar](_sidebar.md)
 - [second-page](second-page.md)
 - [test](test.md)
+- [SampleFolder](/SampleFolder/_folder.md)
 
 ## Site Setup
 

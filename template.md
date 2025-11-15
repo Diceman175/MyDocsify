@@ -4,6 +4,7 @@
 |---------------------|----------------------|----------|
 | Definition Template | Feedback Appreciated | concept  |
 
+- [SampleFolder](/SampleFolder/_folder.md)
 
 <a id="TOC"></a> Table of Contents
 
@@ -19,7 +20,7 @@
 
 ## Reference Links
 
-[TOC](#TOC) | [Master Index](./anthology-master-list_how-to-install-and-config.md) | [README]
+[TOC](#TOC) | [Master Index](master-index.md) | [README]
 
 This is a [reference link][1].
 This is another [reference link][link-name].

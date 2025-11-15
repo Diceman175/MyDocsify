@@ -1,5 +1,5 @@
 # Sample Folder Text File
 
-- [Sample](../Sample.md)
-- [Template](../template.md)
-- [README](../README.md)
+- [Sample.md](../Sample.md)
+- [Template.md](../template.md)
+- [README.md](../README.md)

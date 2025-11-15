@@ -7,5 +7,5 @@
 - [Test](./test.md)
   - [Example Second Page](second-page.md)
 - [Navbar](_navbar.md)
-- [Sidebar](_side.md)
+- [Sidebar](_sidebar.md)
 - [GitHub Syntax Testing of Badges](GitHub-Syntax-Testing-of-Badges.md)

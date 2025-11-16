@@ -11,6 +11,7 @@ const octokit = new Octokit({
 ```
 
 ```bash
+#!/bin/bash
 cd ~
 pwd
 ls -ltr

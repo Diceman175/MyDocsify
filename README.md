@@ -31,6 +31,8 @@ Upload these template files to any static web server. The file `.nojekyll` is on
 
 ### GitHub Pages
 
+[git-cheat-sheet](./SampleFolder/git-cheat-sheet-Modified-Print.md
+)
 #### Hosting Site
 
 To host this template on GitHub Pages do the following:  

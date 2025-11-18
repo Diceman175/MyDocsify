@@ -6,15 +6,15 @@
 
 ### View Configuration
 
-- Run `git config --list` **Show current configuration:**
-- Run `git config --local --list` **Show repository configuration:**
-- Run `git config --global --list` **Show global configuration:**
-- Run `git config --system --list` **Show system configuration:**
+- Run `git config --list` # **Show current configuration:**
+- Run `git config --local --list` ## **Show repository configuration:**
+- Run `git config --global --list` ### **Show global configuration:**
+- Run `git config --system --list` #### **Show system configuration:**
 
 ### User Configuration
 
-- Run `git config --global user.name "[firstname lastname]"` **Set your name for version history:**
-- Run `git config --global user.email "[valid-email]"` **Set your email address:**
+- Run `git config --global user.name "[firstname lastname]"` ##### **Set your name for version history:**
+- Run `git config --global user.email "[valid-email]"` ###### **Set your email address:**
 
 ### Display & Editor Settings
 

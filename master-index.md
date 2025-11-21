@@ -1,4 +1,4 @@
-# Anthology Master List | Cheat Sheets
+# Anthology Master List | Cheat Sheets <!-- omit from toc -->
 
 This Anthology document contains the master list of various cheat sheats I have built or collected, this file is referenced in each subsequent .md file, so that it can be used to return to the master list.
 
@@ -7,11 +7,10 @@ This template is used to create a standard how to .md document
 <a id="TOC"></a>
 Table of Contents
 
-- [Anthology Master List | Cheat Sheets](#anthology-master-list--cheat-sheets)
-  - [Cheet Sheet Original](#cheet-sheet-original)
-  - [Cheet Sheet Collection](#cheet-sheet-collection)
-  - [Blockquote Manual List using 2 spaces at the end](#blockquote-manual-list-using-2-spaces-at-the-end)
-  - [Ordered list using numbers](#ordered-list-using-numbers)
+- [Cheet Sheet Original](#cheet-sheet-original)
+- [Cheet Sheet Collection](#cheet-sheet-collection)
+- [Blockquote Manual List using 2 spaces at the end](#blockquote-manual-list-using-2-spaces-at-the-end)
+- [Ordered list using numbers](#ordered-list-using-numbers)
 
 ## Cheet Sheet Original
 

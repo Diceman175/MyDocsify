@@ -1,4 +1,4 @@
-# Git and Git Flow Cheat Sheet 
+# Git and Git Flow Cheat Sheet <!-- omit from toc -->
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) This comprehensive Git cheat sheet helps you master Git commands without memorizing everything. Whether you're a beginner or an experienced developer, this guide provides quick reference to essential Git operations.
 

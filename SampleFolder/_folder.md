@@ -1,4 +1,4 @@
-# Sample Folder Text File
+# Sample Folder Text File <!-- omit from toc -->
 
 - [Sample1](..\Sample.md) | MD = yes | GH = No | HTML = 404
 - [Sample2](.\Sample.md) | MD = no | GH = no | HTML = yes displays as /.\Sample

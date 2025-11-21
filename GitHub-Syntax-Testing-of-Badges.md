@@ -1,4 +1,5 @@
-# GitHub Syntax Testing of Badges
+# GitHub Syntax Testing of Badges <!-- omit from toc -->
+
 <!-- badges: start -->
 ![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
 ![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)

@@ -1,4 +1,4 @@
-# Example Second Page
+# Example Second Page <!-- omit from toc -->
 
 This is an example second page that will appear in the Docsify Sidebar.
 

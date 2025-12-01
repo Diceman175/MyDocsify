@@ -4,8 +4,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
 ![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
 ![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 <!-- badges: end -->
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
 
@@ -56,3 +57,4 @@ Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users)
 
 
 To learn more about using Docsify, visit https://docsify.js.org.
+

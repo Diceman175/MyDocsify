@@ -6,6 +6,12 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
 <!-- badges: end -->
 
+<!--START_SECTION:badges-->
+
+<!--END_SECTION:badges-->
+
+[Marketplace - Actions - Badges](https://github.com/marketplace/actions/badges-readme)
+
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
@@ -13,7 +19,7 @@ https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
 A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
 
 > Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
-> 
+
 I am using this to test html and markdown creation formatting for documentation purpose.  
 This template is used for creating Markdown-based documentation sites, with no build process required.
 
@@ -36,8 +42,8 @@ Upload these template files to any static web server. The file `.nojekyll` is on
 
 ### GitHub Pages
 
-[git-cheat-sheet](./SampleFolder/git-cheat-sheet-Modified-Print.md
-)
+[git-cheat-sheet](./SampleFolder/git-cheat-sheet-Modified-Print.md)
+
 #### Hosting Site
 
 To host this template on GitHub Pages do the following:  

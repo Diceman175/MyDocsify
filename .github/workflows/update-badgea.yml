@@ -15,7 +15,7 @@ jobs:
       contents: write
     steps:
       - name: Update Badges
-        uses: pemtajo/badge-readme@3.1.1
+        uses: Diceman175/README@main
         with:
           CREDLY_USER: ${{ Diceman175 }} # Uses your GitHub username
           NUMBER_LAST_BADGES: 0 # Show last 10 badges (0 = all)

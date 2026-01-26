@@ -23,7 +23,7 @@ jobs:
 
 steps:
       - name: Update Credly Badges
-        uses: jd-35656/readme-credly-badges@v1
+        uses: diceman175/README.md@v1.0
         with:
           credly_username: 'your-credly-username'
           badge_size: '150x150'

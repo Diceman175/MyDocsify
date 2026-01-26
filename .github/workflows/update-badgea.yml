@@ -17,7 +17,8 @@ jobs:
       - name: Update Badges
         uses: Diceman175/MyDocsify@main
         with:
-          CREDLY_USER: ${{ steven-paradise }} # Uses your GitHub username
+          CREDLY_USER: 'steven-paradise' # Uses your GitHub username
+# CREDLY_USER: ${{ steven-paradise }} # Uses your GitHub username
           NUMBER_LAST_BADGES: 0 # Show last 10 badges (0 = all)
           #readme_file: 'README.md'
           #credly_username: 'sparadise@mtb.com'

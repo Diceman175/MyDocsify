@@ -19,3 +19,18 @@ jobs:
         with:
           CREDLY_USER: ${{ sparadise@mtb.com }} # Uses your GitHub username
           NUMBER_LAST_BADGES: 0 # Show last 10 badges (0 = all)
+
+
+steps:
+      - name: Update Credly Badges
+        uses: jd-35656/readme-credly-badges@v1
+        with:
+          credly_username: 'your-credly-username'
+          badge_size: '150x150'
+          badge_sort_by: 'issued'
+          github_api_url: 'https://api.github.com'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_repo: ${{ github.repository }}
+          github_branch: 'main'
+          readme_file: 'README.md'
+          commit_message: 'Updated README with Credly badges'

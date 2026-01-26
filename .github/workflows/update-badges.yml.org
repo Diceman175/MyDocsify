@@ -17,5 +17,5 @@ jobs:
       - name: Update Badges
         uses: pemtajo/badge-readme@3.1.1
         with:
-          CREDLY_USER: ${{ Diceman175 }} # Uses your GitHub username
+          CREDLY_USER: ${{ sparadise@mtb.com }} # Uses your GitHub username
           NUMBER_LAST_BADGES: 10 # Show last 10 badges (0 = all)

@@ -1,14 +1,12 @@
 # Docsify Template <!-- omit from toc -->
+<!--START_SECTION:badges-->
+<!--END_SECTION:badges-->
 
 <!-- badges: start -->
 ![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
 ![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
 ![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
 <!-- badges: end -->
-
-<!--START_SECTION:badges-->
-
-<!--END_SECTION:badges-->
 
 [Marketplace - Actions - Badges](https://github.com/marketplace/actions/badges-readme)
 

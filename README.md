@@ -27,14 +27,12 @@
 
 ### Parchment Badges
 
-<a href="https://badges.parchment.com/public/assertions/Wtep3febRM2BaIzM-6KqZg?identity__email=sparadise%40mtb.com" title="
-Enterprise Workshop | API Collaboration Ace"><img src="https://api.badgr.io/public/badges/7pAphTeWTf2F-oS8PSy30Q/image" alt="Enterprise Workshop | API Collaboration Ace" width="80" height="80"></a>
+<a href="https://badges.parchment.com/public/assertions/Wtep3febRM2BaIzM-6KqZg?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | API Collaboration Ace"><img src="https://api.badgr.io/public/badges/7pAphTeWTf2F-oS8PSy30Q/image" alt="Enterprise Workshop | API Collaboration Ace" width="80" height="80"></a>
 <a href="https://badges.parchment.com/public/assertions/jvn73O5IRuGPjlj8Ba6mDA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | DocStar"><img src="https://api.badgr.io/public/badges/jfpBEGCrR7m76aC6mEiEjg/image" alt="Enterprise Workshop | DocStar" width="80" height="80"></a>
 <a href="https://badges.parchment.com/public/assertions/FunhKJSfSBudqSSGbUGcUA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Endpoint Explorer"><img src="https://api.badgr.io/public/badges/GBpQBp64TfqBDDaPAym7KA/image" alt="Enterprise Workshop | Endpoint Explorer" width="80" height="80"></a>
 <a href="https://badges.parchment.com/public/assertions/Yh4TJxcoQKGYioYzFgVh3w?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Mock Magician"><img src="https://api.badgr.io/public/badges/tVAdU-MHSOS4zuCSR63G1A/image" alt="Enterprise Workshop | Mock Magician" width="80" height="80"></a>
 <a href="https://badges.parchment.com/public/assertions/pPdhw942Q1S48EFN8q7OPA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Test Gear Tactician"><img src="https://api.badgr.io/public/badges/DfQWWJwYRmWjZ9o2V4X77A/image" alt="Enterprise Workshop | Test Gear Tactician" width="80" height="80"></a>
 <a href="https://badges.parchment.com/public/assertions/9w9kteH7TxCMcklcVkLTRA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Workflow Wizard"><img src="https://api.badgr.io/public/badges/UeePMNctRa6vySS6bRMe0Q/image" alt="Enterprise Workshop | Workflow Wizard" width="80" height="80"></a>
-
 
 ## Sample Code Source
 
@@ -44,14 +42,9 @@ Enterprise Workshop | API Collaboration Ace"><img src="https://api.badgr.io/publ
 - [Marketplace - Actions - Badges](https://github.com/marketplace/actions/badges-readme)
 - Badges
 
-
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
-
-
-
-
 
 I am using this to test html and markdown creation formatting for documentation purpose.  
 This template is used for creating Markdown-based documentation sites, with no build process required.
@@ -80,12 +73,10 @@ To host this template on GitHub Pages do the following:
 
 How about editing the content of your new Docsify site on GitHub Pages? View the Markdown page you want to edit (for example, **README.md**) and tap the **Pencil Icon**, then save any changes by tapping the green **Commit changes...** button. In just a few moments the Docsify site will be automatically updated to reflect those changes.
 
-### Viewing Locally 
+### Viewing Locally
+
 Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users) in the repo folder to serve run locally.
 
 ## Docsify Documentation
 
-
 To learn more about using Docsify, visit https://docsify.js.org.
-
-

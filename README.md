@@ -1,28 +1,4 @@
-# Docsify Template <!-- omit from toc -->
-<!--START_SECTION:badges-->
-<a href="https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272" title="Use Git Like A Pro"><img src="https://images.credly.com/size/80x80/images/cd07a629-cc2b-4d64-a221-6048f425144c/9b009902-a0d9-4633-bfef-51bbb635202b.png" alt="Use Git Like A Pro" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/851deede-a054-4b29-8557-da736824cacd" title="NGINX and OpenShift"><img src="https://images.credly.com/size/80x80/images/a4eddf4f-5301-4b1d-92de-351b163891b1/image.png" alt="NGINX and OpenShift" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/b818e1a7-cb58-48c8-b98a-676e2d94f0da" title="CompTIA Security+ Certification"><img src="https://images.credly.com/size/80x80/images/dbb39f01-125f-45c1-885c-38ff832cc686/blob" alt="CompTIA Security+ Certification" width="80" height="80"></a>
-<!--END_SECTION:badges-->
-
-<!-- badges: start -->
-![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
-![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
-![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
-<!-- badges: end -->
-
-[Marketplace - Actions - Badges](https://github.com/marketplace/actions/badges-readme)
-
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
-https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
-
-A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
-
-> Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
-
-I am using this to test html and markdown creation formatting for documentation purpose.  
-This template is used for creating Markdown-based documentation sites, with no build process required.
+# My Testing Site based upon Docsify <!-- omit from toc -->
 
 ## MD Sample Files
 
@@ -35,7 +11,41 @@ This template is used for creating Markdown-based documentation sites, with no b
 - [test](test.md)
 - [SampleFolder](/SampleFolder/_folder.md)
 
-## Site Setup
+## Badges
+<!-- badges: start -->
+![GitHub last commit](https://img.shields.io/github/last-commit/diceman175/mydocsify)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/diceman175/mydocsify)
+![GitHub repo size](https://img.shields.io/github/repo-size/diceman175/mydocsify)
+<!-- badges: end -->
+
+## Credly Badges
+<!--START_SECTION:badges-->
+<a href="https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272" title="Use Git Like A Pro"><img src="https://images.credly.com/size/80x80/images/cd07a629-cc2b-4d64-a221-6048f425144c/9b009902-a0d9-4633-bfef-51bbb635202b.png" alt="Use Git Like A Pro" width="80" height="80"></a>
+<a href="https://www.credly.com/badges/851deede-a054-4b29-8557-da736824cacd" title="NGINX and OpenShift"><img src="https://images.credly.com/size/80x80/images/a4eddf4f-5301-4b1d-92de-351b163891b1/image.png" alt="NGINX and OpenShift" width="80" height="80"></a>
+<a href="https://www.credly.com/badges/b818e1a7-cb58-48c8-b98a-676e2d94f0da" title="CompTIA Security+ Certification"><img src="https://images.credly.com/size/80x80/images/dbb39f01-125f-45c1-885c-38ff832cc686/blob" alt="CompTIA Security+ Certification" width="80" height="80"></a>
+<!--END_SECTION:badges-->
+
+## Sample Code Source
+
+- A simple Docsify site [My Diceman175 Sample MyDocsify Site](https://diceman175.github.io/MyDocsify/#/)
+- Site is automaticaly generated from github via [Docsify](https://github.com/docsifyjs/docsify/)
+- Docsify
+- [Marketplace - Actions - Badges](https://github.com/marketplace/actions/badges-readme)
+- Badges
+
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
+
+
+
+
+
+I am using this to test html and markdown creation formatting for documentation purpose.  
+This template is used for creating Markdown-based documentation sites, with no build process required.
+
+## Site Setup This can be deleted
 
 ### Static Webserver
 

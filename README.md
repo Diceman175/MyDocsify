@@ -29,15 +29,10 @@
 
 <a href="https://badges.parchment.com/public/assertions/Wtep3febRM2BaIzM-6KqZg?identity__email=sparadise%40mtb.com" title="
 Enterprise Workshop | API Collaboration Ace"><img src="https://api.badgr.io/public/badges/7pAphTeWTf2F-oS8PSy30Q/image" alt="Enterprise Workshop | API Collaboration Ace" width="80" height="80"></a>
-
 <a href="https://badges.parchment.com/public/assertions/jvn73O5IRuGPjlj8Ba6mDA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | DocStar"><img src="https://api.badgr.io/public/badges/jfpBEGCrR7m76aC6mEiEjg/image" alt="Enterprise Workshop | DocStar" width="80" height="80"></a>
-
 <a href="https://badges.parchment.com/public/assertions/FunhKJSfSBudqSSGbUGcUA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Endpoint Explorer"><img src="https://api.badgr.io/public/badges/GBpQBp64TfqBDDaPAym7KA/image" alt="Enterprise Workshop | Endpoint Explorer" width="80" height="80"></a>
-
 <a href="https://badges.parchment.com/public/assertions/Yh4TJxcoQKGYioYzFgVh3w?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Mock Magician"><img src="https://api.badgr.io/public/badges/tVAdU-MHSOS4zuCSR63G1A/image" alt="Enterprise Workshop | Mock Magician" width="80" height="80"></a>
-
 <a href="https://badges.parchment.com/public/assertions/pPdhw942Q1S48EFN8q7OPA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Test Gear Tactician"><img src="https://api.badgr.io/public/badges/DfQWWJwYRmWjZ9o2V4X77A/image" alt="Enterprise Workshop | Test Gear Tactician" width="80" height="80"></a>
-
 <a href="https://badges.parchment.com/public/assertions/9w9kteH7TxCMcklcVkLTRA?identity__email=sparadise%40mtb.com" title="Enterprise Workshop | Workflow Wizard"><img src="https://api.badgr.io/public/badges/UeePMNctRa6vySS6bRMe0Q/image" alt="Enterprise Workshop | Workflow Wizard" width="80" height="80"></a>
 
 

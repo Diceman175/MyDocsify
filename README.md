@@ -1,5 +1,8 @@
 # Docsify Template <!-- omit from toc -->
 <!--START_SECTION:badges-->
+<a href="https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272" title="Use Git Like A Pro"><img src="https://images.credly.com/size/80x80/images/cd07a629-cc2b-4d64-a221-6048f425144c/9b009902-a0d9-4633-bfef-51bbb635202b.png" alt="Use Git Like A Pro" width="80" height="80"></a>
+<a href="https://www.credly.com/badges/851deede-a054-4b29-8557-da736824cacd" title="NGINX and OpenShift"><img src="https://images.credly.com/size/80x80/images/a4eddf4f-5301-4b1d-92de-351b163891b1/image.png" alt="NGINX and OpenShift" width="80" height="80"></a>
+<a href="https://www.credly.com/badges/b818e1a7-cb58-48c8-b98a-676e2d94f0da" title="CompTIA Security+ Certification"><img src="https://images.credly.com/size/80x80/images/dbb39f01-125f-45c1-885c-38ff832cc686/blob" alt="CompTIA Security+ Certification" width="80" height="80"></a>
 <!--END_SECTION:badges-->
 
 <!-- badges: start -->

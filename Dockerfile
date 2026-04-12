@@ -26,7 +26,7 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # Install dependencies and setup Chrome using Docker-specific script
-RUN chmod +x setup_chrome.sh
+RUN chmod +x ./setup_chrome.sh
 RUN ./setup_chrome.sh
 
 # Test ChromeDriver before running main app

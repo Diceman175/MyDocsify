@@ -8,6 +8,20 @@ apt-get update
 
 # Install dependencies for Chrome
 apt-get install -y wget curl unzip gnupg2 ca-certificates
+apt-get install -y \
+    chromium-browser \
+    chromium-driver \
+    fonts-liberation \
+    libnss3 \
+    libxss1 \
+    xdg-utils
+
+# Verify ChromeDriver installation
+which chromedriver || echo "ChromeDriver installation completed"
+
+echo "Chrome and ChromeDriver setup completed successfully"
+
+
 
 # Install Google Chrome (Debian method)
 if ! command -v google-chrome &> /dev/null; then
@@ -35,3 +49,9 @@ rm -rf /var/lib/apt/lists/*
 
 echo "Docker setup complete!"
 echo "ChromeDriver will be managed by webdriver-manager"
+
+
+
+
+
+

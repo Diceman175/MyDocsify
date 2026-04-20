@@ -44,7 +44,7 @@
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0dfcb75e-ea03-4724-9257-6e953fa5d272" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url
+[Credly public URL](https://www.credly.com/badges/0dfcb75e-ea03-4724-9257-6e953fa5d272/public_url)
 
 I am using this to test html and markdown creation formatting for documentation purpose.  
 This template is used for creating Markdown-based documentation sites, with no build process required.
@@ -79,4 +79,20 @@ Run `npx serve .` (Node.js users) or `python -m http.server 8000` (Python users)
 
 ## Docsify Documentation
 
-To learn more about using Docsify, visit https://docsify.js.org.
+To learn more about using Docsify, visit [docsify.js.org](https://docsify.js.org/).
+
+## Action Release Tagging
+
+This repository's workflow uses a stable major tag (`v1`) for the action reference.
+
+When you want `v1` to point to a newer commit:
+
+1. Move the tag locally: `git tag -f v1 <commit-sha>`
+2. Push the updated tag: `git push origin v1 --force`
+
+This keeps workflow references stable while still allowing controlled updates.
+
+## Project Maintenance
+
+- [Changelog](CHANGELOG.md)
+- [Release Checklist](RELEASE_CHECKLIST.md)

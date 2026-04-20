@@ -15,7 +15,7 @@ jobs:
       contents: write
     steps:
       - name: Update Badges
-        uses: Diceman175/MyDocsify@main
+        uses: Diceman175/MyDocsify@v1
         with:
           CREDLY_USER: 'steven-paradise' # Uses your GitHub username
 # CREDLY_USER: ${{ steven-paradise }} # Uses your GitHub username

@@ -1,0 +1,6 @@
+# Normalize text files
+* text=auto
+
+# Force LF for Markdown and templates
+*.md  text eol=lf
+*.txt text eol=lf

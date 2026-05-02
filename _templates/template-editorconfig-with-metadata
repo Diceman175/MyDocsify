@@ -1,0 +1,207 @@
+# ============================================================
+# Title: Editor Configuration
+# Purpose: Enforce consistent coding styles across editors/IDEs
+# ============================================================
+#
+# METADATA:
+#   filename: .editorconfig
+#   title: Editor Configuration
+#   authorname: Your Name
+#   version: 0.1.0
+#   created: 2026-04-20
+#   last_updated: 2026-04-20
+#
+# CHANGELOG:
+#   Most recent entries first. Reference change codes from
+#   rules-change-codes.jsonc for semantic versioning.
+#
+#   Version 0.1.0 - 2026-04-20 - Your Name
+#     IMP: Initial .editorconfig setup with metadata template
+#
+# CHANGE CODES:
+#   Reference: rules-change-codes.jsonc
+#
+#   FIX  - Bug fixes (patch bump)
+#   IMP  - New features (minor bump)
+#   CHG  - Improvements/refactoring (minor bump)
+#   REF  - Documentation/references (patch bump)
+#   BRK  - Breaking changes (major bump)
+#   SEC  - Security fixes (patch bump)
+#   TST  - Tests/CI (patch bump)
+#   DOC  - Documentation (patch bump)
+#   CFG  - Configuration (minor bump)
+#   DEP  - Dependencies (patch bump)
+#   OPS  - Operations/deployment (patch bump)
+#   WIP  - Work in progress (no version bump)
+#
+# NOTES:
+#   Place in project root. Supported by VS Code, JetBrains,
+#   Visual Studio, Vim, Emacs, Sublime Text, and more.
+#   Editor-specific plugins may be required (e.g., VS Code
+#   auto-detects without a plugin; see editorconfig.org).
+#   For full code definitions, see rules-change-codes.jsonc
+# ============================================================
+
+# This is the top-level .editorconfig; stop searching upward
+root = true
+
+
+# ============================================================
+# All Files — Baseline
+# ============================================================
+
+[*]
+charset                  = utf-8
+end_of_line              = lf
+insert_final_newline     = true
+trim_trailing_whitespace = true
+indent_style             = space
+indent_size              = 4
+
+
+# ============================================================
+# Web / Frontend (2-space indent is conventional)
+# ============================================================
+
+[*.{html,css,scss,less,js,mjs,cjs,jsx,ts,tsx,vue,svelte,json,jsonc,yaml,yml,toml}]
+indent_size = 2
+
+
+# ============================================================
+# Markdown — preserve trailing spaces (intentional line breaks)
+# ============================================================
+
+[*.{md,mdx}]
+trim_trailing_whitespace = false
+indent_size              = 2
+
+
+# ============================================================
+# Makefiles — MUST use tabs
+# ============================================================
+
+[Makefile]
+indent_style = tab
+
+
+# ============================================================
+# Go — tabs are idiomatic
+# ============================================================
+
+[*.go]
+indent_style = tab
+
+
+# ============================================================
+# Python — 4-space indent (PEP 8)
+# ============================================================
+
+[*.py]
+indent_size = 4
+
+
+# ============================================================
+# PowerShell
+# ============================================================
+
+[*.{ps1,psm1,psd1}]
+indent_size = 4
+
+
+# ============================================================
+# Shell Scripts
+# ============================================================
+
+[*.{sh,bash,zsh}]
+indent_size = 2
+
+
+# ============================================================
+# Batch / CMD / BTM — typically 4 spaces or tabs
+# ============================================================
+
+[*.{bat,cmd,btm}]
+indent_size = 4
+end_of_line = crlf
+
+
+# ============================================================
+# VBScript / HTA / WSF — Windows line endings preferred
+# ============================================================
+
+[*.{vbs,hta,wsf}]
+end_of_line = crlf
+indent_size = 4
+
+
+# ============================================================
+# AutoIt
+# ============================================================
+
+[*.au3]
+indent_size = 4
+
+
+# ============================================================
+# C# / .NET
+# ============================================================
+
+[*.{cs,csx,vb,vbx}]
+indent_size = 4
+
+
+# ============================================================
+# C / C++
+# ============================================================
+
+[*.{c,h,cpp,hpp,cc,hh}]
+indent_size = 4
+
+
+# ============================================================
+# Java / Kotlin
+# ============================================================
+
+[*.{java,kt,kts}]
+indent_size = 4
+
+
+# ============================================================
+# SQL
+# ============================================================
+
+[*.sql]
+indent_size = 4
+
+
+# ============================================================
+# XML / Config files
+# ============================================================
+
+[*.{xml,xsd,xsl,xslt,wsdl,config,csproj,vbproj,fsproj,props,targets}]
+indent_size = 2
+
+
+# ============================================================
+# Perl
+# ============================================================
+
+[*.{pl,pm,t}]
+indent_size = 4
+
+
+# ============================================================
+# Rust
+# ============================================================
+
+[*.rs]
+indent_size = 4
+
+
+# ============================================================
+# Lock files — do not trim (managed by tooling)
+# ============================================================
+
+[{package-lock.json,yarn.lock,pnpm-lock.yaml,Cargo.lock}]
+insert_final_newline     = false
+trim_trailing_whitespace = false

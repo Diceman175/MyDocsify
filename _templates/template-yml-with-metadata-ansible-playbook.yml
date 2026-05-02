@@ -1,0 +1,177 @@
+---
+# ============================================================
+# Title: Your Ansible Playbook
+# Purpose: A brief description of what this playbook configures
+# ============================================================
+#
+# METADATA:
+#   filename: playbook.yml
+#   title: Your Ansible Playbook
+#   authorname: Your Name
+#   version: 2026-04-21
+#   created: 2026-04-20
+#   last_updated: 2026-04-21
+#
+# CHANGELOG:
+#   Version 2026-04-21 - Your Name
+#     OPS: Include rules-change-codes files and update metadata
+#   Version 2026-04-21 - Your Name
+#     CHG: Clean 1.0.2 baseline snapshot
+#   Most recent entries first. Reference change codes from
+#   rules-change-codes.jsonc for semantic versioning.
+#
+#   Version 0.1.0 - 2026-04-20 - Your Name
+#     IMP: Initial Ansible playbook with metadata template
+#
+# CHANGE CODES:
+#   Reference: rules-change-codes.jsonc
+#
+#   FIX  - Bug fixes (patch bump)
+#   IMP  - New features (minor bump)
+#   CHG  - Improvements/refactoring (minor bump)
+#   REF  - Documentation/references (patch bump)
+#   BRK  - Breaking changes (major bump)
+#   SEC  - Security fixes (patch bump)
+#   TST  - Tests/CI (patch bump)
+#   DOC  - Documentation (patch bump)
+#   CFG  - Configuration (minor bump)
+#   DEP  - Dependencies (patch bump)
+#   OPS  - Operations/deployment (patch bump)
+#   WIP  - Work in progress (no version bump)
+#
+# USAGE:
+#   ansible-playbook playbook.yml -i inventory/hosts.ini
+#   ansible-playbook playbook.yml -i inventory/hosts.ini --check
+#   ansible-playbook playbook.yml -i inventory/hosts.ini --tags setup
+#
+# NOTES:
+#   Requires: ansible >= 2.15
+#   For full code definitions, see rules-change-codes.jsonc
+# ============================================================
+
+# ============================================================
+# Play: Configure Webservers
+# ============================================================
+
+- name: Configure web servers
+  hosts: webservers
+  become: true
+  gather_facts: true
+
+  # ----------------------------------------------------------
+  # Variables
+  # ----------------------------------------------------------
+  vars:
+    app_name:    "your-app"
+    app_port:    8080
+    app_user:    "appuser"
+    app_group:   "appgroup"
+    app_dir:     "/opt/your-app"
+    log_dir:     "/var/log/your-app"
+    config_dir:  "/etc/your-app"
+    environment: "production"
+
+  vars_files:
+    - vars/common.yml
+    # - vars/secrets.yml   # Encrypted with ansible-vault
+
+  # ----------------------------------------------------------
+  # Pre-tasks (run before roles and tasks)
+  # ----------------------------------------------------------
+  pre_tasks:
+    - name: Update apt cache (Debian/Ubuntu)
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_os_family == "Debian"
+      tags: [setup, packages]
+
+    - name: Ensure required directories exist
+      ansible.builtin.file:
+        path:  "{{ item }}"
+        state: directory
+        owner: "{{ app_user }}"
+        group: "{{ app_group }}"
+        mode:  "0755"
+      loop:
+        - "{{ app_dir }}"
+        - "{{ log_dir }}"
+        - "{{ config_dir }}"
+      tags: [setup]
+
+  # ----------------------------------------------------------
+  # Roles
+  # ----------------------------------------------------------
+  roles:
+    - role: common
+      tags: [common]
+    # - role: nginx
+    #   tags: [nginx, web]
+
+  # ----------------------------------------------------------
+  # Tasks
+  # ----------------------------------------------------------
+  tasks:
+    - name: Ensure app group exists
+      ansible.builtin.group:
+        name:  "{{ app_group }}"
+        state: present
+      tags: [setup, users]
+
+    - name: Ensure app user exists
+      ansible.builtin.user:
+        name:    "{{ app_user }}"
+        group:   "{{ app_group }}"
+        shell:   /sbin/nologin
+        system:  true
+        state:   present
+      tags: [setup, users]
+
+    - name: Deploy application configuration
+      ansible.builtin.template:
+        src:   templates/app-config.j2
+        dest:  "{{ config_dir }}/config.yml"
+        owner: "{{ app_user }}"
+        group: "{{ app_group }}"
+        mode:  "0640"
+      notify: Restart application service
+      tags: [config, deploy]
+
+    - name: Ensure application service is running
+      ansible.builtin.systemd:
+        name:          "{{ app_name }}"
+        state:         started
+        enabled:       true
+        daemon_reload: true
+      tags: [service]
+
+    - name: Verify application is responding
+      ansible.builtin.uri:
+        url:            "http://localhost:{{ app_port }}/health"
+        return_content: false
+        status_code:    200
+      retries:  5
+      delay:    3
+      register: health_check
+      tags: [verify]
+
+  # ----------------------------------------------------------
+  # Handlers (triggered by notify)
+  # ----------------------------------------------------------
+  handlers:
+    - name: Restart application service
+      ansible.builtin.systemd:
+        name:  "{{ app_name }}"
+        state: restarted
+
+  # ----------------------------------------------------------
+  # Post-tasks (run after roles and tasks)
+  # ----------------------------------------------------------
+  post_tasks:
+    - name: Print deployment summary
+      ansible.builtin.debug:
+        msg: >
+          Deployed {{ app_name }} v{{ app_version | default('unknown') }}
+          to {{ inventory_hostname }} ({{ ansible_host }})
+          in environment: {{ environment }}
+      tags: [always]

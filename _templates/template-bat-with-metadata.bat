@@ -1,0 +1,105 @@
+@echo off
+REM ============================================================
+REM Title: Your Project Title
+REM Purpose: A brief description of what this script does
+REM ============================================================
+REM
+REM METADATA:
+REM   filename: your-project-file.bat
+REM   title: Your Project Title
+REM   authorname: Your Name
+REM   version: 2026-04-21
+REM   created: 2026-04-20
+REM   last_updated: 2026-04-21
+REM
+REM CHANGELOG:
+REM   Version 2026-04-21 - Your Name
+REM     OPS: Include rules-change-codes files and update metadata
+REM   Version 2026-04-21 - Your Name
+REM     CHG: Clean 1.0.2 baseline snapshot
+REM   Most recent entries first. Reference change codes from
+REM   rules-change-codes.jsonc for semantic versioning.
+REM
+REM   Version 0.1.0 - 2026-04-20 - Your Name
+REM     IMP: Initial batch script setup with metadata template
+REM
+REM CHANGE CODES:
+REM   Reference: rules-change-codes.jsonc
+REM
+REM   FIX  - Bug fixes (patch bump)
+REM   IMP  - New features (minor bump)
+REM   CHG  - Improvements/refactoring (minor bump)
+REM   REF  - Documentation/references (patch bump)
+REM   BRK  - Breaking changes (major bump)
+REM   SEC  - Security fixes (patch bump)
+REM   TST  - Tests/CI (patch bump)
+REM   DOC  - Documentation (patch bump)
+REM   CFG  - Configuration (minor bump)
+REM   DEP  - Dependencies (patch bump)
+REM   OPS  - Operations/deployment (patch bump)
+REM   WIP  - Work in progress (no version bump)
+REM
+REM NOTES:
+REM   For full code definitions, see rules-change-codes.jsonc
+REM
+REM ============================================================
+
+setlocal enabledelayedexpansion
+
+REM ============================================================
+REM Configuration
+REM ============================================================
+
+set SCRIPT_VERSION=0.1.0
+set SCRIPT_AUTHOR=Your Name
+set DEBUG=0
+
+REM ============================================================
+REM Main Script Logic
+REM ============================================================
+
+cls
+echo.
+echo Your Project Title
+echo Version: %SCRIPT_VERSION%
+echo Author: %SCRIPT_AUTHOR%
+echo.
+
+goto :Main
+
+REM ============================================================
+REM Functions
+REM ============================================================
+
+:PrintMessage
+    echo [INFO] %~1
+    goto :EOF
+
+:PrintError
+    echo [ERROR] %~1
+    goto :EOF
+
+:GetExampleData
+    setlocal enabledelayedexpansion
+    set "data=Item One"
+    endlocal & set "exampleData=%data%"
+    goto :EOF
+
+REM ============================================================
+REM Main
+REM ============================================================
+
+:Main
+    call :PrintMessage "Script started"
+    
+    call :GetExampleData
+    call :PrintMessage "Retrieved data: %exampleData%"
+    
+    call :PrintMessage "Script completed successfully"
+    exit /b 0
+
+:Error
+    call :PrintError "An error occurred"
+    exit /b 1
+
+endlocal

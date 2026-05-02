@@ -1,0 +1,68 @@
+---
+title: "Prompt Template with Metadata"
+description: "Base .prompt template using markdown-style frontmatter and changelog tracking"
+author: "Steven Paradise"
+filename: "template-prompt-with-metadata.prompt"
+schema_version: "2.0.0"
+version: "0.1.0"
+date: "2026-05-02"
+lastmod: "2026-05-02"
+---
+
+# Purpose
+
+Use this template as a starting point for prompt assets that use the `.prompt`
+extension while retaining markdown-compatible structure.
+
+## Usage Notes
+
+1. Keep metadata fields in canonical required order.
+2. Keep changelog entries newest first.
+3. Bump version in metadata and changelog together.
+
+## Prompt Body
+
+You are a specialized assistant for {domain}.
+
+Objectives:
+1. {objective_1}
+2. {objective_2}
+3. {objective_3}
+
+Constraints:
+1. {constraint_1}
+2. {constraint_2}
+
+Output format:
+- {format_requirements}
+
+## Changelog
+
+### 0.1.0 — 2026-05-02
+- IMP: Initial prompt template with metadata and changelog tracking
+
+T
+
+Use that new `template-prompt-with-metadata.prompt` file to create a new file in the `C:\Data\GitHub\Diceman175\My-Engineering-Cockpit\_templates\_metadata-schema` folder named "metadata-schema.prompt"
+
+
+1. use the new template "C:\Data\GitHub\Diceman175\My-Engineering-Cockpit\_templates\prompt\template-prompt-with-metadata.prompt" to create a new file in the "C:\Data\GitHub\Diceman175\My-Engineering-Cockpit\_templates\_metadata-schema` folder named "metadata-schema.prompt" this should contain a valid prompt for the next 7 objectives.
+
+Objective 1: How to baseline all the template files under "C:\Data\GitHub\Diceman175\My-Engineering-Cockpit\_templates" useing the `metadata-schema.yaml` file
+Objective 3: How to create a new file extension, and align it's metadata changelog, encoding, and naming standards to `metadata-schema.yaml`
+Objective 4: How to create a new file from one of the templates and align it's metadata changelog, encoding, and naming standards to the main template and then ultimatly to to metadata-schema.yaml.
+Objective 5: How to change an existing files metadata or add non-existing or incomplete metadata based upon one of thoat template.
+It need to align with the template of its own extension and ultimatly align it's metadata changelog, encoding, and naming standards to the main template and then ultimatly to to metadata-schema.yaml.
+Objective 6: How to use hydration kit / shim 
+Objective 7: How to use the script to push out and update the other repos.
+--
+
+3. I need a PowerShell script named "metadata-schema.bootstrap-new-repo.ps1" hydration kit / shim in which when I bring on a new repo, I can load a copy of the existing template from the Diceman175\My-Engineering-Cockpit\_templates repo/path.
+4. I need a script named "metadata-schema.baseline-templates.ps1"   to push out the state of the current template folder to any and all directories directly under "C:\Data\GitHub\Diceman175"  it needs to flatten out and only copy the actual template files not the archive or readme files.
+
+
+
+
+The _templates root CHANGELOG.md & README.md need to have their metadata updated to match new schema and updated entirely to account for all the changes we made.
+
+Stop during any phase something does not line up and you need input as to not be destructive..

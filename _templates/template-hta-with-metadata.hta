@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<!--
+  ============================================================
+  Title: Your HTA Application
+  Purpose: A brief description of what this HTA does
+  ============================================================
+
+  METADATA:
+    filename: YourApp.hta
+    title: Your HTA Application
+    authorname: Your Name
+    version: 0.1.0
+    created: 2026-04-20
+    last_updated: 2026-04-20
+
+  CHANGELOG:
+    Most recent entries first. Reference change codes from
+    rules-change-codes.jsonc for semantic versioning.
+
+    Version 0.1.0 - 2026-04-20 - Your Name
+      IMP: Initial HTA application setup with metadata template
+
+  CHANGE CODES:
+    Reference: rules-change-codes.jsonc
+
+    FIX  - Bug fixes (patch bump)
+    IMP  - New features (minor bump)
+    CHG  - Improvements/refactoring (minor bump)
+    REF  - Documentation/references (patch bump)
+    BRK  - Breaking changes (major bump)
+    SEC  - Security fixes (patch bump)
+    TST  - Tests/CI (patch bump)
+    DOC  - Documentation (patch bump)
+    CFG  - Configuration (minor bump)
+    DEP  - Dependencies (patch bump)
+    OPS  - Operations/deployment (patch bump)
+    WIP  - Work in progress (no version bump)
+
+  NOTES:
+    HTAs run with elevated trust via mshta.exe.
+    For full code definitions, see rules-change-codes.jsonc
+  ============================================================
+-->
+<head>
+  <title>Your HTA Application</title>
+
+  <!-- HTA application settings -->
+  <HTA:APPLICATION
+    ID="YourApp"
+    APPLICATIONNAME="Your HTA Application"
+    CAPTION="yes"
+    SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="yes"
+    WINDOWSTATE="normal"
+    MINIMIZEBUTTON="yes"
+    MAXIMIZEBUTTON="yes"
+    SCROLL="no"
+    SCROLLFLAT="yes"
+    VERSION="0.1.0"
+    ICON=""
+  />
+
+  <meta http-equiv="x-ua-compatible" content="ie=9" />
+
+  <style>
+    body {
+      font-family: Segoe UI, Arial, sans-serif;
+      font-size: 13px;
+      margin: 10px;
+      background-color: #f0f0f0;
+      color: #1a1a1a;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 6px 14px;
+      margin: 4px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 10px;
+      padding: 8px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      min-height: 60px;
+      white-space: pre-wrap;
+      font-family: Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .error {
+      color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your HTA Application</h1>
+
+  <button onclick="RunMain()">Run</button>
+  <button onclick="ClearOutput()">Clear</button>
+  <button onclick="window.close()">Exit</button>
+
+  <div id="output">Ready.</div>
+
+<script language="VBScript">
+
+  ' ============================================================
+  ' Module-level objects
+  ' ============================================================
+  Dim oShell, oFSO
+  Set oShell = CreateObject("WScript.Shell")
+  Set oFSO   = CreateObject("Scripting.FileSystemObject")
+
+  ' ============================================================
+  ' Entry Point
+  ' ============================================================
+  Sub RunMain()
+    On Error Resume Next
+
+    Dim result
+    result = GetExampleData("example-key")
+
+    If Err.Number <> 0 Then
+      PrintError "Error " & Err.Number & ": " & Err.Description
+      Err.Clear
+      Exit Sub
+    End If
+
+    PrintMessage result
+  End Sub
+
+  ' ============================================================
+  ' Example data function
+  ' ============================================================
+  Function GetExampleData(ByVal sKey)
+    GetExampleData = "Data for key: " & sKey
+  End Function
+
+  ' ============================================================
+  ' Output helpers
+  ' ============================================================
+  Sub PrintMessage(ByVal sMsg)
+    document.getElementById("output").innerHTML = _
+      document.getElementById("output").innerHTML & sMsg & "<br/>"
+  End Sub
+
+  Sub PrintError(ByVal sMsg)
+    document.getElementById("output").innerHTML = _
+      document.getElementById("output").innerHTML & _
+      "<span class='error'>" & sMsg & "</span><br/>"
+  End Sub
+
+  Sub ClearOutput()
+    document.getElementById("output").innerHTML = ""
+  End Sub
+
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  Title: Your Web Page
+  Purpose: A brief description of what this page does
+  ============================================================
+
+  METADATA:
+    filename: index.html
+    title: Your Web Page
+    authorname: Your Name
+    version: 0.1.0
+    created: 2026-04-20
+    last_updated: 2026-04-20
+
+  CHANGELOG:
+    Most recent entries first. Reference change codes from
+    rules-change-codes.jsonc for semantic versioning.
+
+    Version 0.1.0 - 2026-04-20 - Your Name
+      IMP: Initial HTML page setup with metadata template
+
+  CHANGE CODES:
+    Reference: rules-change-codes.jsonc
+
+    FIX  - Bug fixes (patch bump)
+    IMP  - New features (minor bump)
+    CHG  - Improvements/refactoring (minor bump)
+    REF  - Documentation/references (patch bump)
+    BRK  - Breaking changes (major bump)
+    SEC  - Security fixes (patch bump)
+    TST  - Tests/CI (patch bump)
+    DOC  - Documentation (patch bump)
+    CFG  - Configuration (minor bump)
+    DEP  - Dependencies (patch bump)
+    OPS  - Operations/deployment (patch bump)
+    WIP  - Work in progress (no version bump)
+
+  NOTES:
+    For full code definitions, see rules-change-codes.jsonc
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A brief description of this page" />
+  <meta name="author" content="Your Name" />
+  <meta name="version" content="0.1.0" />
+
+  <title>Your Web Page</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- Header                                                        -->
+  <!-- ============================================================ -->
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- Main Content                                                  -->
+  <!-- ============================================================ -->
+  <main id="main">
+    <h1>Your Page Title</h1>
+    <p>Your page content goes here.</p>
+
+    <!-- Example: Form -->
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Example Form</h2>
+      <form id="example-form" novalidate>
+        <label for="example-input">Label:</label>
+        <input
+          type="text"
+          id="example-input"
+          name="example"
+          placeholder="Enter value"
+          required
+          aria-required="true"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Example: Output area -->
+    <section aria-labelledby="output-heading">
+      <h2 id="output-heading">Output</h2>
+      <div id="output" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- Footer                                                        -->
+  <!-- ============================================================ -->
+  <footer>
+    <p>&copy; 2026 Your Name</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js" type="module"></script>
+
+  <script>
+    // Inline script for critical path or quick bootstrapping only.
+    // Prefer external main.js for all application logic.
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form   = document.getElementById('example-form');
+      const output = document.getElementById('output');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const val = document.getElementById('example-input').value.trim();
+        if (!val) {
+          output.textContent = 'Please enter a value.';
+          return;
+        }
+        output.textContent = 'You entered: ' + val;
+      });
+    });
+  </script>
+
+</body>
+</html>

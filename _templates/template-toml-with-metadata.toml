@@ -1,0 +1,137 @@
+# ============================================================
+# Title: Your TOML Configuration
+# Purpose: A brief description of what this file configures
+# ============================================================
+#
+# METADATA:
+#   filename: your-config.toml
+#   title: Your TOML Configuration
+#   authorname: Your Name
+#   version: 2026-04-21
+#   created: 2026-04-20
+#   last_updated: 2026-04-21
+#
+# CHANGELOG:
+#   Version 2026-04-21 - Your Name
+#     OPS: Include rules-change-codes files and update metadata
+#   Version 2026-04-21 - Your Name
+#     CHG: Clean 1.0.2 baseline snapshot
+#   Most recent entries first. Reference change codes from
+#   rules-change-codes.jsonc for semantic versioning.
+#
+#   Version 0.1.0 - 2026-04-20 - Your Name
+#     IMP: Initial TOML configuration setup with metadata template
+#
+# CHANGE CODES:
+#   Reference: rules-change-codes.jsonc
+#
+#   FIX  - Bug fixes (patch bump)
+#   IMP  - New features (minor bump)
+#   CHG  - Improvements/refactoring (minor bump)
+#   REF  - Documentation/references (patch bump)
+#   BRK  - Breaking changes (major bump)
+#   SEC  - Security fixes (patch bump)
+#   TST  - Tests/CI (patch bump)
+#   DOC  - Documentation (patch bump)
+#   CFG  - Configuration (minor bump)
+#   DEP  - Dependencies (patch bump)
+#   OPS  - Operations/deployment (patch bump)
+#   WIP  - Work in progress (no version bump)
+#
+# NOTES:
+#   For full code definitions, see rules-change-codes.jsonc
+#
+# ============================================================
+
+# ============================================================
+# Metadata Section
+# ============================================================
+
+[metadata]
+filename     = "your-config.toml"
+title        = "Your TOML Configuration"
+description  = "A brief description of what this file configures"
+authorname   = "Your Name"
+version      = "0.1.0"
+created      = "2026-04-20"
+last_updated = "2026-04-20"
+
+# ============================================================
+# Changelog Section
+# ============================================================
+
+[[changelog]]
+version = "0.1.0"
+date    = "2026-04-20"
+author  = "Your Name"
+
+  [[changelog.changes]]
+  code = "IMP"
+  note = "Initial TOML configuration setup with metadata template"
+
+# ============================================================
+# General Configuration
+# ============================================================
+
+[general]
+name        = "Example Project"
+enabled     = true
+environment = "development"
+debug_mode  = false
+
+# ============================================================
+# Database Configuration
+# ============================================================
+
+[database]
+server   = "localhost"
+port     = 5432
+name     = "your_database"
+username = "your_user"
+password = "your_password"
+timeout  = 30
+pool_size = 10
+
+# ============================================================
+# Logging Configuration
+# ============================================================
+
+[logging]
+level      = "info"
+log_path   = "./logs"
+format     = "json"
+max_size   = 104857600  # bytes (100 MB)
+retention  = 30         # days
+
+# ============================================================
+# Performance Configuration
+# ============================================================
+
+[performance]
+max_connections    = 100
+request_timeout    = 30
+cache_enabled      = true
+cache_duration_min = 60
+
+# ============================================================
+# Feature Flags
+# ============================================================
+
+[features]
+feature_a     = true
+feature_b     = false
+beta_features = false
+
+# ============================================================
+# Data Items (Array of Tables)
+# ============================================================
+
+[[items]]
+id     = 1
+name   = "Item One"
+status = "active"
+
+[[items]]
+id     = 2
+name   = "Item Two"
+status = "inactive"

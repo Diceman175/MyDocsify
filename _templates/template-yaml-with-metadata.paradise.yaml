@@ -1,0 +1,88 @@
+# YAML Metadata (keep at top of file or in a separate _metadata.yaml)
+# NOTE: use semantic-versioning for "version" and ISO 8601 dates (YYYY-MM-DD)
+
+metadata:
+  filename: MyFile.yaml                # file name (informational)
+  title: Short descriptive title       # one-line summary
+  description: >                       # longer description (folded block)
+    A one- to two-paragraph description of what this YAML config or
+    document is for, what consumes it, and high-level behavior.
+  version: 1.0.0                        # semantic version: MAJOR.MINOR.PATCH
+  scope: system / service / project    # brief scope tag
+  created: 2026-04-09                   # ISO 8601 date
+  last_updated: 2026-04-09              # ISO 8601 date of last change
+  author:
+    name: Author Name
+    email: author@example.com           # optional contact
+    org: Organization Name              # optional
+  maintainer:
+    name: Maintainer Name               # who to contact for updates
+    email: maintainer@example.com
+  license: MIT                          # SPDX identifier or text
+  compatibility:
+    os: [windows, linux]                # consumers or platforms
+    app_versions:                        # optional consumer app versions
+      - appA: ">=2.0 <3.0"
+  dependencies:
+    - package-or-tool-1 >=1.2.3
+    - package-or-tool-2
+  tags: [example, config, production]   # freeform tags
+  labels:                               # structured labels for tooling
+    env: production
+    tier: backend
+
+# Change log (most recent first). Each entry includes version, date, author, and short notes.
+change_log:
+  - version: 1.0.1
+    date: 2026-04-09
+    author: Author Name
+    changes:
+      - FIX: Corrected path expansion for Windows consumers
+      - DOC: Added invocation examples
+  - version: 1.0.0
+    date: 2026-04-01
+    author: Author Name
+    changes:
+      - IMP: Initial release; core schema and defaults
+
+# Invocation / usage examples (how to apply, consume or validate this YAML)
+invocation_examples:
+  - description: CLI validation with yamllint
+    command: yamllint -c .yamllint.yml MyFile.yaml
+  - description: Load into Python app
+    snippet: |
+      import yaml
+      with open("MyFile.yaml") as f:
+          cfg = yaml.safe_load(f)
+  - description: Kubernetes ConfigMap apply (if applicable)
+    command: kubectl apply -f MyFile.yaml
+
+# Schema / structure summary (concise reference for consumers)
+schema:
+  type: object
+  required:
+    - metadata
+    - services
+  properties:
+    metadata: {}
+    services:
+      type: object
+      description: Service definitions keyed by name
+
+# Checksums & provenance (optional — useful for CI/automation)
+provenance:
+  checksum_sha256: "sha256:..."         # computed at release
+  source_repo: "https://git.example/repo"
+  commit: "abcdef1234567890"
+
+# Exit / status codes for processes that consume this YAML (optional)
+exit_codes:
+  0: Success
+  1: Validation error
+  2: Missing dependency
+  3: Permission denied
+
+# Internal notes / TODOs
+notes:
+  - "Keep metadata block < 100 lines for quick scanning by tools."
+  - "Update metadata.last_updated and change_log on every change."

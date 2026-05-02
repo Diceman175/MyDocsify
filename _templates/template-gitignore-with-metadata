@@ -1,0 +1,243 @@
+# ============================================================
+# Title: Git Ignore Rules
+# Purpose: Define files and directories Git should not track
+# ============================================================
+#
+# METADATA:
+#   filename: .gitignore
+#   title: Git Ignore Rules
+#   authorname: Your Name
+#   version: 0.1.0
+#   created: 2026-04-20
+#   last_updated: 2026-04-20
+#
+# CHANGELOG:
+#   Most recent entries first. Reference change codes from
+#   rules-change-codes.jsonc for semantic versioning.
+#
+#   Version 0.1.0 - 2026-04-20 - Your Name
+#     IMP: Initial .gitignore setup with metadata template
+#
+# CHANGE CODES:
+#   Reference: rules-change-codes.jsonc
+#
+#   FIX  - Bug fixes (patch bump)
+#   IMP  - New features (minor bump)
+#   CHG  - Improvements/refactoring (minor bump)
+#   REF  - Documentation/references (patch bump)
+#   BRK  - Breaking changes (major bump)
+#   SEC  - Security fixes (patch bump)
+#   TST  - Tests/CI (patch bump)
+#   DOC  - Documentation (patch bump)
+#   CFG  - Configuration (minor bump)
+#   DEP  - Dependencies (patch bump)
+#   OPS  - Operations/deployment (patch bump)
+#   WIP  - Work in progress (no version bump)
+#
+# NOTES:
+#   Place in project root. Add project-specific rules at the bottom.
+#   Test patterns at: https://gitignore.io
+#   For full code definitions, see rules-change-codes.jsonc
+# ============================================================
+
+
+# ============================================================
+# Secrets & Credentials — NEVER commit these
+# ============================================================
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+auth.json
+
+
+# ============================================================
+# Operating System
+# ============================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+
+# ============================================================
+# Editor / IDE
+# ============================================================
+
+# VS Code (keep .vscode/settings.json if sharing config)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains (IntelliJ, Rider, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+
+# ============================================================
+# Node.js / npm
+# ============================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.pnpm-store
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+package-lock.json
+# Uncomment to ignore package-lock.json (libraries should track it)
+# yarn.lock
+# pnpm-lock.yaml
+
+
+# ============================================================
+# Python
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.coverage
+htmlcov/
+
+
+# ============================================================
+# TypeScript / JavaScript Build Outputs
+# ============================================================
+
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+*.tsbuildinfo
+
+
+# ============================================================
+# PowerShell
+# ============================================================
+
+*.ps1xml
+
+
+# ============================================================
+# .NET / C#
+# ============================================================
+
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.nupkg
+*.snupkg
+TestResults/
+
+
+# ============================================================
+# Logs & Temp
+# ============================================================
+
+logs/
+*.log
+log/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+
+# ============================================================
+# Coverage & Test Reports
+# ============================================================
+
+coverage/
+*.lcov
+*.coveragexml
+
+
+# ============================================================
+# Docker
+# ============================================================
+
+.dockerignore
+
+
+# ============================================================
+# Terraform
+# ============================================================
+
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+
+# ============================================================
+# Project-Specific Rules
+# ============================================================
+
+# Add your project-specific ignores here

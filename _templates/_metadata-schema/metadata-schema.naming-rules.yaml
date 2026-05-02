@@ -1,0 +1,91 @@
+# ============================================================
+# METADATA:
+#   title:         Metadata Schema — Naming Rules Sidecar
+#   description:   Machine-readable naming policy for governed file families that use dotted base-name sidecars
+#   author:        Steven Paradise
+#   filename:      metadata-schema.naming-rules.yaml
+#   schema_version: 2.0.0
+#   version:       2.0.0
+#   date:          2026-05-01
+#   lastmod:       2026-05-02
+# ============================================================
+
+title: "Metadata Schema — Naming Rules Sidecar"
+description: "Machine-readable naming policy for governed file families that use dotted base-name sidecars"
+author: "Steven Paradise"
+filename: "metadata-schema.naming-rules.yaml"
+schema_version: "2.0.0"
+version: "2.0.0"
+date: "2026-05-01"
+lastmod: "2026-05-02"
+
+naming_policy:
+  root_file_pattern: "<base-name>.<ext>"
+  sidecar_file_pattern: "<base-name>.<descriptor>.<ext>"
+  descriptor_rules:
+    case: "lowercase"
+    separator: "."
+    allowed_characters: "a-z, 0-9, hyphen"
+    allow_multiple_descriptor_segments: true
+  enforcement_rules:
+    - "All governed files must start with the canonical base-name"
+    - "Descriptors must be dot-separated and lowercase"
+    - "The last segment must be the real file extension"
+    - "Do not mix dotted and hyphenated sidecar strategies in the same family"
+
+governed_families:
+  metadata-schema:
+    canonical_folder: "_templates/_metadata-schema"
+    allowed_files:
+      - "metadata-schema.yaml"
+      - "metadata-schema.schema.json"
+      - "metadata-schema.prompt"
+      - "metadata-schema.readme.md"
+      - "metadata-schema.changelog.md"
+      - "metadata-schema.existing-templates.yaml"
+      - "metadata-schema.changelog-governance.md"
+      - "metadata-schema.changelog-rules.jsonc"
+      - "metadata-schema.changelog-rules.yaml"
+      - "metadata-schema.changelog-rules.schema.json"
+      - "metadata-schema.encoding-governance.md"
+      - "metadata-schema.encoding-rules.yaml"
+      - "metadata-schema.encoding-rules.schema.json"
+      - "metadata-schema.naming-governance.md"
+      - "metadata-schema.naming-rules.yaml"
+      - "metadata-schema.naming-rules.schema.json"
+      - "metadata-schema.existing-templates.schema.json"
+      - "metadata-schema.validate.ps1"
+      - "metadata-schema.bootstrap-new-repo.ps1"
+      - "metadata-schema.baseline-templates.ps1"
+  metadata-schema-encoding-governance:
+    canonical_folder: "AI-Engineering/Projects-Ideas/metadata-schema-encoding-governance"
+    allowed_files:
+      - "metadata-schema-encoding-governance.readme.md"
+      - "metadata-schema-encoding-governance.onboarding-playbook.md"
+      - "metadata-schema-encoding-governance.check-encodings.template.ps1"
+      - "metadata-schema-encoding-governance.editorconfig-baseline.template"
+      - "metadata-schema-encoding-governance.encoding-governance.workflow.yml"
+  metadata-schema-ci-integration:
+    canonical_folder: "AI-Engineering/Projects-Ideas/metadata-schema-ci-integration"
+    allowed_files:
+      - "metadata-schema-ci-integration.readme.md"
+      - "metadata-schema-ci-integration.drop-in-kit-guide.md"
+      - "metadata-schema-ci-integration.repo-onboarding-playbook.md"
+      - "metadata-schema-ci-integration.github-actions.workflow.template.yml"
+      - "metadata-schema-ci-integration.path-mapping.template.yaml"
+      - "metadata-schema-ci-integration.pre-push-hook.template.ps1"
+  metadata-schema-naming-governance:
+    canonical_folder: "AI-Engineering/Projects-Ideas/metadata-schema-naming-governance"
+    allowed_files:
+      - "metadata-schema-naming-governance.readme.md"
+      - "metadata-schema-naming-governance.onboarding-playbook.md"
+      - "metadata-schema-naming-governance.check-governed-filenames.template.ps1"
+      - "metadata-schema-naming-governance.naming-governance.workflow.yml"
+
+enforcement:
+  validator_template_ref: "AI-Engineering/Projects-Ideas/metadata-schema-naming-governance/metadata-schema-naming-governance.check-governed-filenames.template.ps1"
+  workflow_template_ref: "AI-Engineering/Projects-Ideas/metadata-schema-naming-governance/metadata-schema-naming-governance.naming-governance.workflow.yml"
+
+notes:
+  governance_ref: "metadata-schema.naming-governance.md"
+  exception_rule: "General template naming remains governed by naming_convention in metadata-schema.yaml; this sidecar applies only to governed file families."

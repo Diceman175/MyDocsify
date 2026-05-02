@@ -1,0 +1,129 @@
+# ============================================================
+# METADATA:
+#   title:         Metadata Schema — Existing Templates Inventory
+#   description:   Machine-readable inventory of all templates registered in this workspace
+#   author:        Steven Paradise
+#   filename:      metadata-schema.existing-templates.yaml
+#   schema_version: 2.0.0
+#   version:       2.1.0
+#   date:          2026-04-24
+#   lastmod:       2026-05-02
+# ============================================================
+#
+# PURPOSE:
+#   This file is a sidecar to metadata-schema.yaml.
+#   It holds the full existing_templates inventory that was previously embedded
+#   inline in metadata-schema.yaml.  The main file references this via:
+#     existing_templates_ref: "metadata-schema.existing-templates.yaml"
+#
+# STRUCTURE:
+#   Each top-level key is a language/type category.
+#   Each value is a list of template filenames found under _templates/{category}/.
+#   Each template appears only once under its canonical owning category.
+#
+# DESIGN DECISIONS:
+#   - node owns template-json-with-metadata-package.json.
+#   - typescript owns template-json-with-metadata-tsconfig.json and template-ts-with-metadata.ts.
+#   - json is reserved for generic JSON templates rather than ecosystem-specific artefacts.
+#   - Categories follow creation/usage priority, not alphabetical sort order.
+# ============================================================
+
+title:         "Metadata Schema — Existing Templates Inventory"
+description:   "Machine-readable inventory of all templates registered in this workspace"
+author:        "Steven Paradise"
+filename:      "metadata-schema.existing-templates.yaml"
+schema_version: "2.0.0"
+version:       "2.1.0"
+date:          "2026-04-24"
+lastmod:       "2026-05-02"
+
+# ============================================================
+# Template Inventory
+# ============================================================
+
+existing_templates:
+  autoit:
+    - "template-au3-with-metadata.au3"
+  batch:
+    - "template-bat-with-metadata.bat"
+  csharp:
+    - "template-cs-with-metadata.cs"
+  markdown:
+    - "template-md-with-metadata.md"
+    - "template-md-with-metadata-changelog.md"
+    - "template-md-with-metadata-readme.md"
+    - "template-md-with-metadata-conversational-ai-essential.md"
+    - "template-md-with-metadata-conversational-ai-comprehensive.md"
+    - "template-md-with-metadata-how-to.md"
+  prompt:
+    - "template-prompt-with-metadata.prompt"
+  powershell:
+    - "template-ps1-with-metadata.ps1"
+    - "template-psd1-with-metadata.psd1"
+    - "template-psm1-with-metadata.psm1"
+  react:
+    - "template-tsx-with-metadata-component.tsx"
+    - "template-tsx-with-metadata-component-test.tsx"
+    - "template-tsx-with-metadata-context.tsx"
+    - "template-ts-with-metadata-custom-hook.ts"
+    - "template-ts-with-metadata-redux-slice.ts"
+    - "template-scss-with-metadata-component-module.scss"
+    - "template-env-with-metadata"
+    - "template-jsx-with-metadata-component.jsx"
+    - "template-jsx-with-metadata-hook.jsx"
+  yaml:
+    - "template-yaml-with-metadata.yaml"
+  ansible:
+    - "template-yml-with-metadata-ansible-playbook.yml"
+  github-actions:
+    - "template-yml-with-metadata-github-actions.yml"
+  json:
+    - "template-json-with-metadata.json"
+  jsonc:
+    - "template-jsonc-with-metadata.jsonc"
+  html:
+    - "template-html-with-metadata.html"
+  css:
+    - "template-css-with-metadata.css"
+  javascript:
+    - "template-js-with-metadata.js"
+  python:
+    - "template-py-with-metadata.py"
+  perl:
+    - "template-pl-with-metadata.pl"
+  shell:
+    - "template-sh-with-metadata.sh"
+  sql:
+    - "template-sql-with-metadata.sql"
+  terraform:
+    - "template-tf-with-metadata.tf"
+  toml:
+    - "template-toml-with-metadata.toml"
+  xml:
+    - "template-xml-with-metadata.xml"
+  wsf:
+    - "template-wsf-with-metadata.wsf"
+  vbs:
+    - "template-vbs-with-metadata.vbs"
+  ini:
+    - "template-ini-with-metadata.ini"
+  registry:
+    - "template-reg-with-metadata.reg"
+  mermaid:
+    - "template-mmd-with-metadata.mmd"
+  nushell:
+    - "template-nu-with-metadata.nu"
+  tcc:
+    - "template-btm-with-metadata.btm"
+  dockerfile:
+    - "template-dockerfile-with-metadata"
+  git:
+    - "template-gitignore-with-metadata"
+    - "template-editorconfig-with-metadata"
+  hta:
+    - "template-hta-with-metadata.hta"
+  node:
+    - "template-json-with-metadata-package.json"
+  typescript:
+    - "template-ts-with-metadata.ts"
+    - "template-json-with-metadata-tsconfig.json"

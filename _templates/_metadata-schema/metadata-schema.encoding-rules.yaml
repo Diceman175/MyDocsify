@@ -1,0 +1,126 @@
+# ============================================================
+# METADATA:
+#   title:         Metadata Schema — Encoding Rules Sidecar
+#   description:   Machine-readable encoding policy matrix for template tooling and automation
+#   author:        Steven Paradise
+#   filename:      metadata-schema.encoding-rules.yaml
+#   schema_version: 2.0.0
+#   version:       2.0.0
+#   date:          2026-05-01
+#   lastmod:       2026-05-02
+# ============================================================
+
+title: "Metadata Schema — Encoding Rules Sidecar"
+description: "Machine-readable encoding policy matrix for template tooling and automation"
+author: "Steven Paradise"
+filename: "metadata-schema.encoding-rules.yaml"
+schema_version: "2.0.0"
+version: "2.0.0"
+date: "2026-05-01"
+lastmod: "2026-05-02"
+
+encoding_policy:
+  defaults:
+    text_encoding: "utf-8"
+    bom: false
+  groups:
+    powershell:
+      extensions: ["ps1", "psm1", "psd1"]
+      text_encoding: "utf-8"
+      bom: true
+      rationale: "PowerShell compatibility on Windows"
+    yaml:
+      extensions: ["yaml", "yml"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "YAML spec and CI compatibility"
+    json:
+      extensions: ["json", "jsonc"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "JSON ecosystem compatibility"
+    docs_and_diagrams:
+      extensions: ["md", "mmd", "prompt", "txt"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Markdown and diagram portability"
+    scripting_and_code:
+      extensions: ["au3", "bash", "bat", "btm", "cmd", "cs", "js", "jsx", "nu", "pl", "py", "rb", "sh", "ts", "tsx", "vbs"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Cross-platform toolchain compatibility"
+    markup_and_workflow_hosts:
+      extensions: ["hta", "html", "wsf", "xml"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Markup and script-host file compatibility"
+    style_and_ui:
+      extensions: ["css", "scss"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Frontend style source compatibility"
+    data_and_ops_configs:
+      extensions: ["ini", "reg", "sql", "tf", "toml"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Configuration and infrastructure source portability"
+    extensionless_templates:
+      basenames: ["dockerfile", "editorconfig", "env", "gitignore"]
+      text_encoding: "utf-8"
+      bom: false
+      rationale: "Extensionless template files used in repository tooling and build contexts"
+
+  coverage:
+    inventory_ref: "metadata-schema.existing-templates.yaml"
+    covered_extensions:
+      - "au3"
+      - "bash"
+      - "bat"
+      - "btm"
+      - "cmd"
+      - "cs"
+      - "css"
+      - "hta"
+      - "html"
+      - "ini"
+      - "js"
+      - "jsx"
+      - "json"
+      - "jsonc"
+      - "md"
+      - "mmd"
+      - "prompt"
+      - "nu"
+      - "pl"
+      - "ps1"
+      - "psd1"
+      - "psm1"
+      - "py"
+      - "rb"
+      - "reg"
+      - "scss"
+      - "sh"
+      - "sql"
+      - "tf"
+      - "toml"
+      - "ts"
+      - "tsx"
+      - "vbs"
+      - "wsf"
+      - "xml"
+      - "yaml"
+      - "yml"
+    covered_basenames:
+      - "dockerfile"
+      - "editorconfig"
+      - "env"
+      - "gitignore"
+
+enforcement:
+  editorconfig: ".editorconfig"
+  vscode_settings: ".vscode/settings.json"
+  scanner_script: "tools/utilities/check-encodings.ps1"
+
+notes:
+  governance_ref: "metadata-schema.encoding-governance.md"
+  conflict_resolution: "When this sidecar and editor settings diverge, update settings and governance doc in the same change set."

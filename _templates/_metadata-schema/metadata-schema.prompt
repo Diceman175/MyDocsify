@@ -1,0 +1,96 @@
+---
+title: "Metadata Schema Objective Execution Prompt"
+description: "Operational prompt for baselining templates, adding new extensions, hydrating repos, and propagating template updates under metadata-schema governance"
+author: "Steven Paradise"
+filename: "metadata-schema.prompt"
+schema_version: "2.0.0"
+version: "0.1.0"
+date: "2026-05-02"
+lastmod: "2026-05-02"
+---
+
+# Purpose
+
+Use this prompt to execute governed template operations across repositories while
+preserving metadata, changelog, encoding, and naming compliance with
+`_templates/_metadata-schema/metadata-schema.yaml`.
+
+## Operating Constraints
+
+1. Non-destructive by default.
+2. Stop and request user input before overwriting, deleting, or renaming files.
+3. Validate every material change against metadata-schema governance sidecars.
+4. Keep metadata fields in canonical order:
+   - `title`, `description`, `author`, `filename`, `schema_version`, `version`, `date`, `lastmod`
+5. Keep changelog entries newest first and use governed change codes.
+6. Keep encoding and BOM choices aligned with encoding rules.
+7. Keep filenames and family sidecars aligned with naming rules.
+
+## Objective Pack (1-7)
+
+Objective 1: Baseline all templates under `_templates` using `metadata-schema.yaml`.
+- Inventory templates from `metadata-schema.existing-templates.yaml`.
+- For each template, validate required metadata fields and order.
+- Confirm changelog structure and change-code usage.
+- Confirm filename and folder pattern compliance.
+- Produce a remediation report grouped by severity.
+
+Objective 2: Run governance validation and produce a release-ready summary.
+- Execute `metadata-schema.validate.ps1`.
+- Report pass/fail with exact violations and proposed fixes.
+- Do not auto-apply destructive fixes without approval.
+
+Objective 3: Create a new file extension and align governance.
+- Add extension handling to comment style and metadata block style mappings.
+- Update lint profile applicability and any extension overrides.
+- Update encoding coverage and rationale.
+- Update naming governance/allowed file lists when new governed sidecars are added.
+- Add or update templates inventory entries.
+- Validate end-to-end.
+
+Objective 4: Create a new file from an existing template and align to schema.
+- Select the canonical template by extension/ecosystem.
+- Populate metadata with schema-compliant fields and values.
+- Add initial changelog entry with governed change code.
+- Validate encoding, naming, and metadata order.
+- Confirm alignment with template family and schema baseline.
+
+Objective 5: Repair metadata on an existing file.
+- Detect missing/incomplete metadata.
+- Add or repair fields using that extension's canonical template shape.
+- Normalize changelog format and semantic versioning.
+- Reconcile file-level metadata with the family template and then schema.
+- Record changes in changelog with minimal, accurate diffs.
+
+Objective 6: Use hydration kit/shim for new repositories.
+- Bootstrap target repo from source template library.
+- Exclude archives and historical snapshots unless explicitly requested.
+- Preserve existing files by default; require force for overwrite.
+- Produce copy plan and summary for review.
+
+Objective 7: Push template baseline updates to other repositories.
+- Enumerate repositories under `C:\Data\GitHub\Diceman175`.
+- Copy only canonical template payloads (flattened set), excluding readme/archive assets.
+- Skip source repository and unmanaged paths.
+- Report per-repo status: copied, skipped, conflicts, errors.
+
+## Execution Workflow
+
+1. Collect context and current repo status.
+2. Build explicit action plan with safety gates.
+3. Execute in small batches with validation checkpoints.
+4. Stop for user input when a destructive action is required.
+5. Summarize outcomes, residual risks, and next actions.
+
+## Output Contract
+
+Provide:
+1. Actions executed.
+2. Files created/updated.
+3. Validation outputs and unresolved violations.
+4. Any pauses requiring user decision.
+
+## Changelog
+
+### 0.1.0 — 2026-05-02
+- IMP: Initial objective execution prompt for metadata-schema governed operations

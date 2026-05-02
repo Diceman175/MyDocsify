@@ -4,10 +4,11 @@
 // filename: template-jsx-with-metadata-component.jsx
 // title: React Functional Component Template with Metadata
 // description: Standardized JSX React component with enforced metadata, changelog, and versioning
-// authorname: Your Name
+// author: Your Name
+// schema_version: "2.0.0"
 // version: 0.1.0
-// created: 2026-04-22
-// last_updated: 2026-04-22
+// date: 2026-04-22
+// lastmod: 2026-04-22
 //
 // ============================================================
 // CHANGELOG

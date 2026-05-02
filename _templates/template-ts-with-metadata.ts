@@ -4,18 +4,16 @@
  * A brief description of what this module does and its purpose in your project.
  *
  * METADATA:
- *   filename: your-project-file.ts
  *   title: Your Project Title
- *   authorname: Your Name
- *   version: 2026-04-21
- *   created: 2026-04-20
- *   last_updated: 2026-04-21
+ *   description: A brief description of what this file does
+ *   author: Your Name
+ *   filename: your-project-file.ts
+ *   schema_version: "2.0.0"
+ *   version: 0.1.0
+ *   date: 2026-04-20
+ *   lastmod: 2026-04-21
  *
  * CHANGELOG:
- *   Version 2026-04-21 - Your Name
- *     OPS: Include rules-change-codes files and update metadata
- *   Version 2026-04-21 - Your Name
- *     CHG: Clean 1.0.2 baseline snapshot
  *   Most recent entries first. Reference change codes from rules-change-codes.jsonc
  *   for semantic versioning.
  *

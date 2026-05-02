@@ -4,12 +4,14 @@
  * Context provider and hooks for managing application state.
  *
  * METADATA:
- *   filename: YourContext.tsx
  *   title: YourContext State Management
- *   authorname: Your Name
+ *   description: A brief description of what this file does
+ *   author: Your Name
+ *   filename: YourContext.tsx
+ *   schema_version: "2.0.0"
  *   version: 0.1.0
- *   created: 2026-04-20
- *   last_updated: 2026-04-20
+ *   date: 2026-04-20
+ *   lastmod: 2026-04-20
  *
  * CHANGELOG:
  *   Version 0.1.0 - 2026-04-20 - Your Name

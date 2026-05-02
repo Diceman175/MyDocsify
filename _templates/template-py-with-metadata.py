@@ -4,12 +4,14 @@ Your Project Title
 A brief description of what this module does and its purpose in your project.
 
 METADATA:
-    filename: your-project-file.py
     title: Your Project Title
-    authorname: Your Name
+    description: A brief description of what this module does and its purpose in your project.
+    author: Your Name
+    filename: your-project-file.py
+    schema_version: "2.0.0"
     version: 0.1.0
-    created: 2026-04-20
-    last_updated: 2026-04-20
+    date: 2026-04-20
+    lastmod: 2026-04-20
 
 CHANGELOG:
     Most recent entries first. Reference change codes from rules-change-codes.jsonc

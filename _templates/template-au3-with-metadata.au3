@@ -1,16 +1,18 @@
 #cs
 ============================================================
 Title: Your AutoIt Script
-Purpose: A brief description of what this script does
+Description: A brief description of what this script does
 ============================================================
 
 METADATA:
-  filename: your-script.au3
   title: Your AutoIt Script
-  authorname: Your Name
+  description: A brief description of what this script does
+  author: Your Name
+  filename: your-script.au3
+  schema_version: "2.0.0"
   version: 0.1.0
-  created: 2026-04-20
-  last_updated: 2026-04-20
+  date: 2026-04-20
+  lastmod: 2026-04-20
 
 CHANGELOG:
   Most recent entries first. Reference change codes from

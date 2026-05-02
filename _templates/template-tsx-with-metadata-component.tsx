@@ -4,12 +4,13 @@
  * A brief description of what this component does.
  *
  * METADATA:
- *   filename: YourComponent.tsx
  *   title: Your Component Name
- *   authorname: Your Name
+ *   author: Your Name
+ *   filename: YourComponent.tsx
+ *   schema_version: "2.0.0"
  *   version: 0.1.0
- *   created: 2026-04-20
- *   last_updated: 2026-04-20
+ *   date: 2026-04-20
+ *   lastmod: 2026-04-20
  *
  * CHANGELOG:
  *   Most recent entries first. Reference change codes from rules-change-codes.jsonc

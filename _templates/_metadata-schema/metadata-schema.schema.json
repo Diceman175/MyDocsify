@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "_metadata": {
+    "title": "Metadata Schema SSOT JSON Schema",
+    "description": "JSON Schema for validating metadata-schema.yaml structure",
+    "author": "Steven Paradise",
+    "filename": "metadata-schema.schema.json",
+    "schema_version": "2.0.0",
+    "version": "2.0.0",
+    "date": "2026-05-01",
+    "lastmod": "2026-05-02"
+  },
+  "title": "Metadata Schema YAML Structure",
+  "description": "Schema for validating top-level metadata-schema.yaml fields and sidecar references",
+  "type": "object",
+  "required": [
+    "title",
+    "description",
+    "author",
+    "filename",
+    "schema_version",
+    "version",
+    "date",
+    "lastmod",
+    "project",
+    "metadata_fields",
+    "lint_rules_common",
+    "metadata_schema_schema_ref",
+    "existing_templates_ref",
+    "existing_templates_schema_ref",
+    "change_governance_ref",
+    "change_rules_ref",
+    "change_rules_yaml_ref",
+    "change_rules_schema_ref",
+    "encoding_governance_ref",
+    "encoding_rules_ref",
+    "encoding_rules_schema_ref",
+    "naming_governance_ref",
+    "naming_rules_ref",
+    "naming_rules_schema_ref",
+    "validate_ref"
+  ],
+  "properties": {
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "author": { "type": "string" },
+    "filename": { "type": "string" },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "lastmod": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "project": {
+      "type": "object",
+      "required": ["workspace", "templates_dir", "current_schema_version", "default_version", "default_date", "default_lastmod"],
+      "properties": {
+        "workspace": { "type": "string" },
+        "templates_dir": { "type": "string" },
+        "current_schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "default_version": { "type": "string" },
+        "default_date": { "type": "string" },
+        "default_lastmod": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "metadata_fields": {
+      "type": "object",
+      "required": ["required", "required_order", "rules"],
+      "properties": {
+        "required": { "type": "array" },
+        "required_order": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rules": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "lint_rules_common": {
+      "type": "object",
+      "required": ["required_metadata_fields", "required_order_ref", "rules"],
+      "properties": {
+        "required_metadata_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_order_ref": { "type": "string" },
+        "rules": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "metadata_schema_schema_ref": { "type": "string" },
+    "existing_templates_ref": { "type": "string" },
+    "existing_templates_schema_ref": { "type": "string" },
+    "change_governance_ref": { "type": "string" },
+    "change_rules_ref": { "type": "string" },
+    "change_rules_yaml_ref": { "type": "string" },
+    "change_rules_schema_ref": { "type": "string" },
+    "encoding_governance_ref": { "type": "string" },
+    "encoding_rules_ref": { "type": "string" },
+    "encoding_rules_schema_ref": { "type": "string" },
+    "naming_governance_ref": { "type": "string" },
+    "naming_rules_ref": { "type": "string" },
+    "naming_rules_schema_ref": { "type": "string" },
+    "validate_ref": { "type": "string" }
+  },
+  "additionalProperties": true
+}

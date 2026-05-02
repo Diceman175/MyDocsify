@@ -1,7 +1,7 @@
 ---
 # ============================================================
 # Template: Project File with Metadata Tracking (YAML Format)
-# Purpose: Demonstrates how to structure a .yaml file with
+# Description: Demonstrates how to structure a .yaml file with
 #          metadata, changelog, and semantic version tracking
 # ============================================================
 #
@@ -23,13 +23,14 @@ metadata:
     A brief description of what this file contains and its purpose
     in your project. Use the folded block (>) for readability.
   author: Your Name                  # Author or team
+  schema_version: "2.0.0"
   status: draft                      # draft | active | deprecated | archived
   version: 1.4.0                     # Semantic version: MAJOR.MINOR.PATCH — must match latest changelog entry
   template_version: 1.4.0            # Version of this template used to create the file
   filename: your-project-file.yaml   # Must match the actual filename on disk
   tags: []                           # Optional: [tag1, tag2] for discoverability
-  created: 2026-04-25                # ISO 8601: YYYY-MM-DD — set once, never changed
-  updated: 2026-04-25                # ISO 8601: YYYY-MM-DD — update on every release
+  date: 2026-04-25                # ISO 8601: YYYY-MM-DD — set once, never changed
+  lastmod: 2026-04-25                # ISO 8601: YYYY-MM-DD — update on every release
 
 # ============================================================
 # CHANGELOG SECTION - Required for version tracking

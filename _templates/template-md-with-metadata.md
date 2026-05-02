@@ -1,17 +1,18 @@
 ---
-filename: your-project-file.md
 title: Your Project Title
 description: A brief description of what this file contains and its purpose in your project
-authorname: Your Name
+author: Your Name
+filename: your-project-file.md
+schema_version: "2.0.0"
 version: 0.1.0
-created: 2026-04-20
-last_updated: 2026-04-20
+date: 2026-04-20
+lastmod: 2026-04-20
 ---
 
 # Your Project Title
 
 ```yaml
-purpose: A brief description of what this file contains and its purpose in your project
+Description: A brief description of what this file contains and its purpose in your project
 ```
 
 ## Changelog

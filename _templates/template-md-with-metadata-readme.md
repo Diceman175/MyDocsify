@@ -1,21 +1,16 @@
 ---
-title: "CHANGELOG markdown file"                     # Human-readable title
-description: "This template is used as a base for any CHANGELOG.md files"
-author: "Steven Paradise"                             # Display name of author or owner
-schema_version: "1.0.0"                              # Version of the metadata standard
-version: "0.4.0"                                     # Semantic version for the template or document
-filename: "template-md-with-metadata-changelog.md"   # Source filename
-date: "2026-04-20"                                   # Creation or publish date (ISO-8601)
-lastmod: "2026-04-26"                                # Last modified date (ISO-8601)
+title: "Template for Markdown-README.md Files"    # Human-readable title
+description: "This template is used as a base for any README.md files"
+author: "Steven Paradise"                         # Display name of author or owner
+filename: "template-md-with-metadata-readme.md"   # Source filename
+schema_version: "2.0.0"                           # Version of the metadata standard
+version: "0.2.0"                                  # Semantic version for the template or document
+date: "2026-04-24"                                # Creation or publish date (ISO-8601)
+lastmod: "2026-04-26"                             # Last modified date (ISO-8601)
 ---
 
-# Template for CHANGELOG Markdown .md Files
-
-All notable changes to this project are documented in this file.
-
-Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-Change codes reference `rules-change-codes.jsonc`.
+# Template for Markdown-README.md Files
+This template is used to align any README files that are created.
 
 ---
 
@@ -39,42 +34,23 @@ Change codes reference `rules-change-codes.jsonc`.
   ============================================================
 -->
 
-- version: "0.4.0"
+- version: "0.2.0"
   date: 2026-04-26
   author: Steven Paradise
   changes:
     - FIX: Added required schema_version field to frontmatter
-    - FIX: Reformatted all changelog entries to canonical changelog_entry_template structure
-    - FIX: Renumbered duplicate 0.2.0 entry (2026-04-20) to 0.1.0 — initial entry must start at 0.1.0
+    - FIX: Reformatted changelog entry to canonical changelog_entry_template structure
     - FIX: Wrapped changelog separator and instruction lines in HTML comment block
     - FIX: Replaced non-conformant hidden changelog entry template with canonical format
-    - CHG: Set author field to Steven Paradise — template maintainer name
-    - CHG: Set date to 2026-04-20 and lastmod to 2026-04-26
-    - FIX: Removed (optional) annotation from filename field — filename is a required field
+    - CHG: Renamed special case suffix from README to readme per lowercase naming convention
     - FIX: Added pre-commit-only caveat to WIP entry in hidden change codes reference
-    - FIX: Corrected typo fronmatter → frontmatter in 0.3.0 changelog entry
-    - FIX: Normalised mixed tab/space indentation to consistent two-space indentation
+    - FIX: Removed (optional) annotation from filename field — filename is a required field
 
-- version: "0.3.0"
+- version: "0.1.0"
   date: 2026-04-24
   author: Steven Paradise
   changes:
-    - CFG: Modified the change code reference
-    - CFG: Removed heading for yaml frontmatter as it conflicted with title
-
-- version: "0.2.0"
-  date: 2026-04-23
-  author: Steven Paradise
-  changes:
-    - CFG: Cleaned up yaml for markdown, left yaml frontmatter
-
-- version: "0.1.0"
-  date: 2026-04-20
-  author: Steven Paradise
-  changes:
-    - IMP: Initial project setup
-
----
+    - IMP: Initial file creation
 
 <!--
 ## Semantic Change Codes and Versioning
@@ -124,13 +100,11 @@ change_codes:
 
 ## Changelog Entry Template
 
-<!--
  ============================================================
 	The Most recent change entries are on top
   Reference change codes from rules-change-codes.jsonc for semantic versioning.
   Copy and paste this block above the previous most recent entry.
   ============================================================
--->
 
 - version: "X.Y.Z"
   date: YYYY-MM-DD

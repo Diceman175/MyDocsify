@@ -4,18 +4,16 @@
  * A brief description of what this hook does and when to use it.
  *
  * METADATA:
- *   filename: useYourHook.ts
  *   title: useYourHook Custom Hook
- *   authorname: Your Name
- *   version: 2026-04-21
- *   created: 2026-04-20
- *   last_updated: 2026-04-21
+ *   description: A brief description of what this file does
+ *   author: Your Name
+ *   filename: useYourHook.ts
+ *   schema_version: "2.0.0"
+ *   version: 0.1.0
+ *   date: 2026-04-20
+ *   lastmod: 2026-04-21
  *
  * CHANGELOG:
- *   Version 2026-04-21 - Your Name
- *     OPS: Include rules-change-codes files and update metadata
- *   Version 2026-04-21 - Your Name
- *     CHG: Clean 1.0.2 baseline snapshot
  *   Version 0.1.0 - 2026-04-20 - Your Name
  *     IMP: Initial custom hook setup with metadata template
  *

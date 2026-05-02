@@ -4,12 +4,13 @@
  * Tests for YourComponent and related functionality.
  *
  * METADATA:
- *   filename: YourComponent.test.tsx
  *   title: YourComponent Test Suite
- *   authorname: Your Name
+ *   author: Your Name
+ *   filename: YourComponent.test.tsx
+ *   schema_version: "2.0.0"
  *   version: 0.1.0
- *   created: 2026-04-20
- *   last_updated: 2026-04-20
+ *   date: 2026-04-20
+ *   lastmod: 2026-04-20
  *
  * CHANGELOG:
  *   Version 0.1.0 - 2026-04-20 - Your Name

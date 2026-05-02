@@ -1,7 +1,7 @@
 /*
  * ============================================================
  * Template: Project File with Metadata Tracking
- * Purpose: Demonstrates how to structure a .jsonc file with
+ * Description: Demonstrates how to structure a .jsonc file with
  *          metadata, changelog, and semantic version tracking
  * ============================================================
  * 
@@ -18,9 +18,16 @@
   // ============================================================
   // METADATA SECTION - Required for all tracked files
   // ============================================================
-  $12026-04-21",                           // Semantic version: MAJOR.MINOR.PATCH
-    "created": "2026-04-20",                      // ISO 8601: YYYY-MM-DD
-    "last_updated": "2026-04-20"                  // ISO 8601: YYYY-MM-DD
+  "_metadata": {
+    "_note": "JSONC supports // comments. Metadata is stored as a top-level _metadata field. Reference: rules-change-codes.jsonc",
+    "title": "Your Project Title",
+    "description": "A brief description of what this file contains and its purpose in your project",
+    "author": "Your Name",
+    "filename": "your-project-file.jsonc",
+    "schema_version": "2.0.0",
+    "version": "0.1.0",
+    "date": "2026-04-20",
+    "lastmod": "2026-04-20"
   },
 
   // ============================================================

@@ -1,22 +1,20 @@
 @echo off
 REM ============================================================
 REM Title: Your Project Title
-REM Purpose: A brief description of what this script does
+REM Description: A brief description of what this script does
 REM ============================================================
 REM
 REM METADATA:
-REM   filename: your-project-file.bat
 REM   title: Your Project Title
-REM   authorname: Your Name
-REM   version: 2026-04-21
-REM   created: 2026-04-20
-REM   last_updated: 2026-04-21
+REM   description: A brief description of what this script does
+REM   author: Your Name
+REM   filename: your-project-file.bat
+REM   schema_version: "2.0.0"
+REM   version: 0.1.0
+REM   date: 2026-04-20
+REM   lastmod: 2026-04-21
 REM
 REM CHANGELOG:
-REM   Version 2026-04-21 - Your Name
-REM     OPS: Include rules-change-codes files and update metadata
-REM   Version 2026-04-21 - Your Name
-REM     CHG: Clean 1.0.2 baseline snapshot
 REM   Most recent entries first. Reference change codes from
 REM   rules-change-codes.jsonc for semantic versioning.
 REM

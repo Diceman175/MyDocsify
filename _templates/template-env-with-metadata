@@ -2,12 +2,13 @@
 # Environment Variables Template
 #
 # METADATA:
-#   filename: .env
 #   title: Environment Variables Configuration
-#   authorname: Your Name
+#   author: Your Name
+#   filename: .env
+#   schema_version: "2.0.0"
 #   version: 0.1.0
-#   created: 2026-04-20
-#   last_updated: 2026-04-20
+#   date: 2026-04-20
+#   lastmod: 2026-04-20
 #
 # CHANGELOG:
 #   Version 0.1.0 - 2026-04-20 - Your Name

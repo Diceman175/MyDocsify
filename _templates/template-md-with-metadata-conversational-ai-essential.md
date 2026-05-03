@@ -78,7 +78,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧠 AI Response 02
+### 🤖 AI Response 02
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -93,7 +93,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🌀 AI Response 03
+### 🤖 AI Response 03
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -108,7 +108,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧬 AI Response 04
+### 🤖 AI Response 04
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -123,7 +123,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧮 AI Response 05
+### 🤖 AI Response 05
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -153,7 +153,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧠 AI Response 07
+### 🤖 AI Response 07
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -168,7 +168,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🌀 AI Response 08
+### 🤖 AI Response 08
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -183,7 +183,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧬 AI Response 09
+### 🤖 AI Response 09
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -198,7 +198,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧮 AI Response 10
+### 🤖 AI Response 10
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -228,7 +228,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧠 AI Response 12
+### 🤖 AI Response 12
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -243,7 +243,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🌀 AI Response 13
+### 🤖 AI Response 13
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -258,7 +258,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧬 AI Response 14
+### 🤖 AI Response 14
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -273,7 +273,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧮 AI Response 15
+### 🤖 AI Response 15
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -304,7 +304,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧠 AI Response 17
+### 🤖 AI Response 17
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -319,7 +319,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🌀 AI Response 18
+### 🤖 AI Response 18
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -334,7 +334,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧬 AI Response 19
+### 🤖 AI Response 19
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->
@@ -351,7 +351,7 @@ This version is designed for documenting your AI interactions:
 <!-- Keep it verbatim for reproducibility.-->
 </details>
 
-### 🧮 AI Response xx
+### 🤖 AI Response xx
 <details>
 <summary>Answer (click to expand)</summary>
 <!-- Paste the response here -->

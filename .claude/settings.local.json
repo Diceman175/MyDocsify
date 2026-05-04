@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(powershell.exe -Command ' *)",
+      "Bash(npm install *)",
+      "Bash(powershell.exe -Command \"cd 'c:/Data/GitHub/Diceman175/My-Jira-Prompt-Builder'; npm install js-yaml; npm install -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @types/js-yaml\")",
+      "Bash(where node *)",
+      "Bash(where npm *)",
+      "Read(//c/Users/steve/AppData/Local/**)",
+      "Read(//c/Users/steve/**)",
+      "Read(//c/ProgramData/**)",
+      "Bash(echo \"exit: $?\")",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH -split ';' | ForEach-Object { if \\(Test-Path \"$_\\\\npm.cmd\"\\) { Write-Output \"Found npm at: $_\" } }; $env:PATH -split ';' | ForEach-Object { if \\(Test-Path \"$_\\\\node.exe\"\\) { Write-Output \"Found node at: $_\" } })",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Program Files \\(x86\\)\\\\nodejs\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue | Select-Object -First 5; Get-ChildItem \"$env:LOCALAPPDATA\\\\fnm\" -ErrorAction SilentlyContinue | Select-Object -First 5)",
+      "PowerShell($dirs = @\\(\"C:\\\\Program Files\\\\nodejs\",\"C:\\\\Program Files \\(x86\\)\\\\nodejs\",\"C:\\\\tools\\\\nodejs\",\"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\",\"$env:APPDATA\\\\npm\"\\); foreach\\($d in $dirs\\){ if\\(Test-Path $d\\){ Write-Output \"EXISTS: $d\"; Get-ChildItem $d | Select-Object Name } else { Write-Output \"MISSING: $d\" } })",
+      "PowerShell($fullPath = [Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); $fullPath -split \";\" | Where-Object { $_ -match \"node\" -or $_ -match \"npm\" })",
+      "PowerShell(Write-Output \"Testing node\"; & \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" --version 2>&1; Write-Output \"Testing with full path done\"; $nvmHome = $env:NVM_HOME; Write-Output \"NVM_HOME: $nvmHome\"; $nodeVersionsDir = \"$env:APPDATA\\\\nvm\"; if\\(Test-Path $nodeVersionsDir\\){ Get-ChildItem $nodeVersionsDir | Select-Object Name })",
+      "PowerShell($tools = @\\(\"volta\",\"fnm\",\"pnpm\",\"yarn\",\"bun\"\\); foreach\\($t in $tools\\){ $cmd = Get-Command $t -ErrorAction SilentlyContinue; if\\($cmd\\){ Write-Output \"FOUND: $t at $\\($cmd.Source\\)\" } else { Write-Output \"NOT FOUND: $t\" } }; Write-Output \"---\"; $nvmExe = Get-ChildItem \"C:\\\\Users\\\\steve\\\\AppData\\\\Roaming\\\\nvm\" -ErrorAction SilentlyContinue | Select-Object -First 3; $nvmExe)",
+      "Read(//c/Data/GitHub/Diceman175/**)",
+      "Read(//c/Data/GitHub/**)"
+    ]
+  }
+}

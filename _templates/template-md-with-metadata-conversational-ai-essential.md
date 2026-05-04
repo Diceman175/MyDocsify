@@ -4,10 +4,10 @@ description: "Unified template for capturing prompts, responses, transcript deta
 author: "Your Name"                       # Display name of author or owner
 filename: "template-md-with-metadata-conversational-ai-essential.md"  # Source filename (optional)
 schema_version: "2.0.0"
-version: "0.7.3"                          # Semantic version for the template or document
-date: "2026-04-24"                        # Creation or publish date (ISO‑8601)
-lastmod: "2026-04-25"                     # Last modified date (ISO‑8601)
-session_id: "sess-20260424-1239-EDT"      # Unique session id (recommended pattern: sess-YYYYMMDD-HHMM-ENV)
+version: "0.1.0"                          # Semantic version for the template or document
+date: "YYYY-MM-DD"                        # Creation or publish date (ISO‑8601)
+lastmod: "YYYY-MM-DD"                     # Last modified date (ISO‑8601)
+session_id: "sess-YYYYMMDD-HHmm-EDT"      # Unique session id (recommended pattern: sess-YYYYMMDD-HHMM-ENV)
 tool_platform:
   - "Anything-llm"
   - "ChatGPT"
@@ -23,39 +23,13 @@ tool_platform:
 model: "copilot-latest"                   # Model or engine label used for the session
 ---
 
-# Conversational AI Session Log with essential Metadata <!-- omit in toc -->
-
-<!-- this should be fine here below the yaml frontmatter, just validate / update the metadata -->
-A unified template combining structured session metadata, prompt/response logging, transcript analysis, and evaluation.
-
----
-
-## Changelog
-<!-- there is no reason to keep this section it is here to track changes to the template itself-->
-- version: 0.7.3 (2026-04-25) Steven Paradise  
-  - IMP: Added comprehensive project README (`template-md-with-metadata-conversational-ai.README.md`) covering all files, processes, GitHub Actions, and all switch examples  
-  - DOC: Version bump; lastmod updated to 2026-04-25
-- version: 0.7.1 (2026-04-24) Steven Paradise  
-  - FIX: Common frontmatter_schema.json
-- version: 0.7.0 (2026-04-24) Steven Paradise  
-  - IMP: Initial version modified from `template-md-with-metadata-conversational-ai-essential.md` version 0.7.0
+## 💬 Collapsible Conversational AI Session Log, support updates via automation <!-- omit in toc -->
+<!-- A unified template combining structured session metadata, prompt/response logging, transcript analysis, and evaluation -->
+<!-- This version is designed for automatically documenting your AI interactions via /log-ai-response -->
+Enter the context of the conversation HERE
+>	prompt & response are **collapsible**, with clean separation for auditing or training future prompts.
 
 ---
-
-## Notes & limitations
-- **Standard Markdown does not include collapsible sections**, so this relies on HTML — but GitHub and most modern renderers fully support it. 
-- Some engines (like Stack Overflow’s renderer) **do not support nested collapsibles**, but GitHub and VS Code do. 
-- Indentation matters when nesting `<details>` blocks — closing tags must align correctly. 
-- The `<strong>` tag keeps the summary bold even in renderers that strip Markdown inside `<summary>`.
-- The horizontal rules (`---`) create clean printable boundaries.
-- The internal headings remain indexable by search engines and MkDocs search.
-
----
-
-## 💬 Collapsible *Conversational AI Prompt + Response Capture*
-
-This version is designed for documenting your AI interactions:  
-**prompt visible**, **response collapsible**, and **clean separation** for auditing or training future prompts.
 
 ### 🗣️ Prompt 01
 <details>
@@ -66,8 +40,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 01
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -81,8 +54,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 02
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -96,8 +68,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 03
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -111,8 +82,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 04
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -126,8 +96,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 05
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -141,8 +110,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 06
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -156,8 +124,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 07
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -171,8 +138,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 08
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -186,8 +152,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 09
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -201,8 +166,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 10
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -216,8 +180,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 11
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -231,8 +194,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 12
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -246,8 +208,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 13
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -261,8 +222,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 14
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -276,8 +236,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 15
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -291,8 +250,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 16
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 
 </details>
 
@@ -307,8 +265,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 17
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -322,8 +279,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 18
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -337,8 +293,7 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response 19
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>
 
 ---
@@ -354,6 +309,5 @@ This version is designed for documenting your AI interactions:
 ### 🤖 AI Response xx
 <details>
 <summary>Answer (click to expand)</summary>
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 </details>

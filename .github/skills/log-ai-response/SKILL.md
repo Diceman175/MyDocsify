@@ -11,17 +11,17 @@ Captures the most recent user prompt and Copilot response from the current conve
 ## Output File
 
 ```
-docs/YYYY-MM-DD_conversational-ai-copilot.md
+docs/YYYY-MM-DD_conversational-ai.md
 ```
 
-Today's date is substituted for `YYYY-MM-DD` (e.g., `docs/2026-05-03_conversational-ai-copilot.md`).
+Today's date is substituted for `YYYY-MM-DD` (e.g., `docs/2026-05-03_conversational-ai.md`).
 
 ## Steps
 
 1. Determine today's date in `YYYY-MM-DD` format (use the current date from context).
 
 2. Build the target file path:
-   `docs/YYYY-MM-DD_conversational-ai-copilot.md`
+   `docs/YYYY-MM-DD_conversational-ai.md`
 
 3. Check if that file exists using file_search for the exact path.
 
@@ -31,7 +31,7 @@ Today's date is substituted for `YYYY-MM-DD` (e.g., `docs/2026-05-03_conversatio
    - Then edit the new file's YAML frontmatter fields to replace placeholder values:
      - `title` → `"Conversational AI Session Log"`
      - `author` → `"Steven Paradise"`
-     - `filename` → the new filename (e.g. `2026-05-03_conversational-ai-copilot.md`)
+     - `filename` → the new filename (e.g. `2026-05-03_conversational-ai.md`)
      - `date` → today's date in `"YYYY-MM-DD"` format
      - `lastmod` → today's date in `"YYYY-MM-DD"` format
      - `model` → `"claude-sonnet-4-6"`
@@ -41,8 +41,7 @@ Today's date is substituted for `YYYY-MM-DD` (e.g., `docs/2026-05-03_conversatio
 
 6. Scan the file to find the first `### 🤖 AI Response` section whose `<details>` block still contains this exact placeholder content:
    ```
-   <!-- Paste the response here -->
-   <!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+   <!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
    ```
 
 7. Identify the slot number (e.g. 01, 02, 03) from that heading. Find the matching `### 🗣️ Prompt NN` block immediately above it.
@@ -51,34 +50,34 @@ Today's date is substituted for `YYYY-MM-DD` (e.g., `docs/2026-05-03_conversatio
 
 9. Identify the most recent Copilot response from this conversation — the AI reply that came immediately before this invocation. Capture the full response with Markdown preserved.
 
-10. Replace the prompt placeholder inside the `### 🗣️ Prompt NN` `<details>` block:
-    - Find: `<!-- Keep it verbatim for reproducibility.-->`
-    - Replace with: the most recent user prompt (verbatim)
+10. Replace the entire contents inside the `### 🗣️ Prompt NN` `<details>` block:
+    - Replace ALL existing content between the `<details>` and `</details>` tags (including any pre-filled prep text)
+    - Replace the `<summary>Write your prompt here (click to expand)</summary>` line with a `<summary>` containing a 3–15 word summary of the prompt
+    - Place the most recent user prompt (verbatim) as the body after the summary
+    - This overwrites whatever was previously in the block
 
 11. Replace the AI response placeholder inside the `### 🤖 AI Response NN` `<details>` block:
-    - Find these two lines:
+    - Find this line:
       ```
-      <!-- Paste the response here -->
-      <!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+      <!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
       ```
     - Replace with: the most recent Copilot response (full Markdown preserved)
 
-12. Rename the heading of the filled slot from `### 🤖 AI Response NN` to `### 🤖 AI-Responded NN`
-    (change "Response" to "AI-Responded"; keep the emoji and slot number unchanged).
+12. Rename the heading of the filled slot from `### 🤖 AI Response NN` to `### 🤖 GitHub Copilot AI-Responded NN`
+    (replace "AI Response" with "GitHub Copilot AI-Responded"; keep the emoji and slot number unchanged).
 
 13. Confirm to the user with this exact format:
-    `Logged to [filename] — Prompt NN / AI-Responded NN.`
+    `Logged to [filename] — Prompt NN / GitHub Copilot AI-Responded NN.`
 
 ## Slot Detection Logic
 
-An empty slot is identified by this exact two-line placeholder inside a `<details>` block:
+An empty slot is identified by this exact placeholder inside a `<details>` block:
 
 ```html
-<!-- Paste the response here -->
-<!-- You can include **Markdown**, code blocks, lists, images — anything. -->
+<!-- AI Response HERE: include **Markdown**, code blocks, lists, images -->
 ```
 
-After writing, the heading changes from `### 🤖 AI Response NN` → `### 🤖 AI-Responded NN`. This makes filled slots visually distinct from empty ones. The skill always advances to the next unfilled pair and never overwrites an already-logged entry.
+After writing, the heading changes from `### 🤖 AI Response NN` → `### 🤖 GitHub Copilot AI-Responded NN`. This makes filled slots visually distinct from empty ones. The skill always advances to the next unfilled pair and never overwrites an already-logged entry.
 
 ## Important Notes
 

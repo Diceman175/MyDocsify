@@ -10,8 +10,13 @@
 *.yaml text eol=lf
 *.yml  text eol=lf
 *.sh   text eol=lf
-*.ps1  text eol=lf
 
 # Force LF for Markdown and templates
-*.md  text eol=lf
-*.txt text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+
+# Force CRLF for Windows-only file types
+*.ps1  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.sln  text eol=crlf

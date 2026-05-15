@@ -14,7 +14,7 @@ REM   version: 0.1.0
 REM   date: 2026-04-20
 REM   lastmod: 2026-04-21
 REM
-REM CHANGELOG:
+REM CHANGELOG:
 REM   Most recent entries first. Reference change codes from
 REM   rules-change-codes.jsonc for semantic versioning.
 REM

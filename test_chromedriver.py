@@ -6,6 +6,7 @@ Test script to verify ChromeDriver setup is working correctly
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+import shutil
 from webdriver_manager.chrome import ChromeDriverManager
 
 def test_chromedriver():
@@ -20,9 +21,14 @@ def test_chromedriver():
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-gpu")
         
-        # Try webdriver-manager first
-        print("Attempting to use webdriver-manager...")
-        service = Service(ChromeDriverManager().install())
+        # Prefer system chromedriver (matches installed chromium in container)
+        chromedriver_path = shutil.which("chromedriver")
+        if chromedriver_path:
+            print(f"Using system chromedriver: {chromedriver_path}")
+            service = Service(chromedriver_path)
+        else:
+            print("System chromedriver not found; attempting webdriver-manager...")
+            service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
         
         # Test basic functionality

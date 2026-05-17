@@ -13,7 +13,7 @@
  *   date: 2026-04-20
  *   lastmod: 2026-04-21
  *
- * CHANGELOG:
+ * CHANGELOG:
  *   Version 0.1.0 - 2026-04-20 - Your Name
  *     IMP: Initial Redux slice setup with metadata template
  *

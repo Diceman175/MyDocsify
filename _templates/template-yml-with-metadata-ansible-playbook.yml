@@ -14,7 +14,7 @@
 #   date: 2026-04-20
 #   lastmod: 2026-04-21
 #
-# CHANGELOG:
+# CHANGELOG:
 #   Most recent entries first. Reference change codes from
 #   rules-change-codes.jsonc for semantic versioning.
 #

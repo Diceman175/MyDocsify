@@ -14,8 +14,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Update Badges
-        uses: Diceman175/MyDocsify@v1
+        uses: ./
         with:
           CREDLY_USER: 'steven-paradise' # Uses your GitHub username
 # CREDLY_USER: ${{ steven-paradise }} # Uses your GitHub username

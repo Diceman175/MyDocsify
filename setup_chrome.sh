@@ -9,7 +9,7 @@ apt-get update
 # Install dependencies for Chrome
 apt-get install -y wget curl unzip gnupg2 ca-certificates
 apt-get install -y \
-    chromium-browser \
+    chromium \
     chromium-driver \
     fonts-liberation \
     libnss3 \
@@ -49,7 +49,6 @@ rm -rf /var/lib/apt/lists/*
 
 echo "Docker setup complete!"
 echo "ChromeDriver will be managed by webdriver-manager"
-
 
 
 

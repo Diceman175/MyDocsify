@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import time
 import requests
+import shutil
 from urllib.parse import urlparse
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -45,8 +46,13 @@ class Credly:
         chrome_options.add_argument("--silent")
         
         try:
-            print("Setting up ChromeDriver using webdriver-manager...")
-            service = Service(ChromeDriverManager().install())
+            system_driver = shutil.which("chromedriver")
+            if system_driver:
+                print(f"Setting up ChromeDriver using system driver: {system_driver}")
+                service = Service(system_driver)
+            else:
+                print("System chromedriver not found, using webdriver-manager...")
+                service = Service(ChromeDriverManager().install())
             driver = webdriver.Chrome(service=service, options=chrome_options)
             print("ChromeDriver initialized successfully")
             return driver

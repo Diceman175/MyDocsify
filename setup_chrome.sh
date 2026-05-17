@@ -23,20 +23,19 @@ echo "Chrome and ChromeDriver setup completed successfully"
 
 
 
-# Install Google Chrome (Debian method)
-if ! command -v google-chrome &> /dev/null; then
-    echo "Installing Google Chrome..."
-    wget -q -O /usr/share/keyrings/google-linux-signing-key.gpg https://dl.google.com/linux/linux_signing_key.pub
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-linux-signing-key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" \
-        > /etc/apt/sources.list.d/google-chrome.list
-    apt-get update
-    apt-get install -y google-chrome-stable
+# Verify Chrome/Chromium installation
+if command -v google-chrome &> /dev/null; then
+    CHROME_CMD="google-chrome"
+elif command -v chromium &> /dev/null; then
+    CHROME_CMD="chromium"
+elif command -v chromium-browser &> /dev/null; then
+    CHROME_CMD="chromium-browser"
 else
-    echo "Google Chrome is already installed"
+    echo "No Chrome/Chromium binary found after install"
+    exit 1
 fi
 
-# Verify Chrome installation
-CHROME_VERSION=$(google-chrome --version)
+CHROME_VERSION=$(${CHROME_CMD} --version)
 echo "Chrome version: $CHROME_VERSION"
 
 # Install webdriver-manager
@@ -49,7 +48,6 @@ rm -rf /var/lib/apt/lists/*
 
 echo "Docker setup complete!"
 echo "ChromeDriver will be managed by webdriver-manager"
-
 
 
 

@@ -1,11 +1,35 @@
-<!-- _sidebar.md -->
+<!-- markdownlint-disable first-line-h1 -->
 
-# Side Nav Bar
+- Getting started
 
-- [Read Me](README.md)
+  - [Quick start](quickstart.md)
+  - [Adding pages](adding-pages.md)
+  - [Cover page](cover.md)
+  - [Custom navbar](custom-navbar.md)
 
-- [Test](test.md)
-  - [Example Second Page](second-page.md)
-- [Navbar](_navbar.md)
-- [Sidebar](_sidebar.md)
-- [GitHub Syntax Testing of Badges](GitHub-Syntax-Testing-of-Badges.md)
+- Customization
+
+  - [Configuration](configuration.md)
+  - [Themes](themes.md)
+  - [List of Plugins](plugins.md)
+  - [Write a Plugin](write-a-plugin.md)
+  - [Markdown configuration](markdown.md)
+  - [Language highlighting](language-highlight.md)
+  - [Emoji](emoji.md)
+
+- Guide
+
+  - [Deploy](deploy.md)
+  - [Helpers](helpers.md)
+  - [Vue compatibility](vue.md)
+  - [CDN](cdn.md)
+  - [Offline Mode (PWA)](pwa.md)
+  - [Embed Files](embed-files.md)
+  - [UI Kit](ui-kit.md)
+
+- Upgrading
+
+  - [v4 to v5](v5-upgrade.md)
+
+* [Awesome docsify](awesome.md)
+* [Changelog](changelog.md)

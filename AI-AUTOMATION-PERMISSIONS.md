@@ -1,0 +1,1 @@
+C:/Data/GitHub/Diceman175/diceman175-governator/permissions/ai-automation/AI-AUTOMATION-PERMISSIONS.md

@@ -1,0 +1,1 @@
+C:/Data/GitHub/Diceman175/diceman175-governator/standards/workspace-naming/WORKSPACE-NAMING-STANDARD.md

@@ -1,26 +1,16 @@
----
-title: "Conversational AI Session Log"    # Human‑readable title
-description: "Unified template for capturing prompts, responses, transcript details, metadata, and evaluation"
-author: "Your Name"                       # Display name of author or owner
-filename: "template-md-with-metadata-conversational-ai-essential.md"  # Source filename (optional)
-schema_version: "2.0.0"
-version: "0.1.0"                          # Semantic version for the template or document
-date: "YYYY-MM-DD"                        # Creation or publish date (ISO‑8601)
-lastmod: "YYYY-MM-DD"                     # Last modified date (ISO‑8601)
-session_id: "sess-YYYYMMDD-HHmm-EDT"      # Unique session id (recommended pattern: sess-YYYYMMDD-HHMM-ENV)
-tool_platform:
-  - "Anything-llm"
-  - "ChatGPT"
-  - "Claude Code"
-  - "Claude"
-  - "Copilot Microsoft 365 Personal"
-  - "Gemini"
-  - "GitHub"
-  - "LM Studio"
-  - "Microsoft 365 Copilot Diceman6459"
-  - "Microsoft 365 Copilot MTB"
-  - "Ollama"
-model: "copilot-latest"                   # Model or engine label used for the session
+﻿---
+title:          "Conversational AI Session Log - YYYY-MM-DD"
+description:    "AI session log capturing prompts and responses for the YYYY-MM-DD working session"
+author:         "Steven Paradise"
+filename:       "template-md-with-metadata-conversational-ai.md"
+schema_version: "2.1"
+version:        "0.1"
+date:           "YYYY-MM-DD"
+lastmod:        "YYYY-MM-DD"
+session_id:     "sess-YYYYMMDD-HHMM"
+tags:
+  - ai/platform/claude-code
+  - ai/model/claude-sonnet-4-6
 ---
 
 ## 💬 Collapsible Conversational AI Session Log, support updates via automation <!-- omit in toc -->

@@ -1,4 +1,12 @@
 {
-  "extends": "../.markdownlint.json"
+  "_version": "1.0",
+  "_lastmod": "2026-06-09",
+  "_description": "Diceman175 workspace markdownlint configuration. Canonical source - distributed as real committed copies to every repo via sync-markdownlint.ps1. The workspace-root .markdownlint.json is the only symlink (local-only convenience, never committed).",
+  "MD013": false,
+  "MD024": { "siblings_only": true },
+  "MD025": { "front_matter_title": "" },
+  "MD032": false,
+  "MD033": false,
+  "MD036": false,
+  "MD060": false
 }
-

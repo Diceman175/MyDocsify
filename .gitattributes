@@ -1,22 +1,50 @@
-# Normalize text files
-* text=auto
+# ============================================================
+# Diceman175 Workspace - Git Attributes (canonical source)
+# ------------------------------------------------------------
+# Real file lives at:
+#   diceman175-governator/standards/workspace/git/.gitattributes
+# Symlinked into every repo root (not the workspace root - it has no .git).
+#
+# Line-ending policy here MUST stay in sync with:
+#   - standards/workspace/formatting/.editorconfig  (editor-layer guidance)
+#   - WORKSPACE-ENCODING-STANDARD.md                 (the governing standard)
+# .gitattributes governs normalization at commit time; .editorconfig
+# guides editors. Note: git cannot enforce UTF-8 BOM - BOM is enforced
+# by .editorconfig charset and tools/utilities/check-encodings.ps1.
+# ============================================================
 
-# Force LF for source and config files
-*.ts   text eol=lf
-*.tsx  text eol=lf
-*.js   text eol=lf
-*.jsx  text eol=lf
-*.json text eol=lf
-*.yaml text eol=lf
-*.yml  text eol=lf
-*.sh   text eol=lf
+# Default: treat files as text, normalize to LF on commit
+* text=auto eol=lf
 
-# Force LF for Markdown and templates
-*.md   text eol=lf
-*.txt  text eol=lf
+# Windows-native file types: keep CRLF in the working tree
+*.ps1   text eol=crlf
+*.psm1  text eol=crlf
+*.psd1  text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.btm   text eol=crlf
+*.vbs   text eol=crlf
+*.reg   text eol=crlf
+*.sln   text eol=crlf
 
-# Force CRLF for Windows-only file types
-*.ps1  text eol=crlf
-*.bat  text eol=crlf
-*.cmd  text eol=crlf
-*.sln  text eol=crlf
+# Explicit binary - never normalize line endings, never diff as text
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.rar   binary
+*.7z    binary
+*.gz    binary
+*.mp3   binary
+*.mp4   binary
+*.wav   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+*.xlsx  binary
+*.docx  binary
+*.pptx  binary

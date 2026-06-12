@@ -1,0 +1,1 @@
+../diceman175-governator/standards/workspace/version/WORKSPACE-VERSION-STANDARD.md

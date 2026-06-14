@@ -1,1 +1,1 @@
-../diceman175-governator/permissions/ai-automation/AI-AUTOMATION-PERMISSIONS.md
+../diceman175-governator/symlink-src/permissions/ai-automation/AI-AUTOMATION-PERMISSIONS.md

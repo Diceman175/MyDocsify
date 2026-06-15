@@ -1,1 +1,1 @@
-../diceman175-governator/symlink-src/standards/workspace/encoding/WORKSPACE-ENCODING-STANDARD.md
+../diceman175-governator/symlink-target/standards/workspace/encoding/WORKSPACE-ENCODING-STANDARD.md

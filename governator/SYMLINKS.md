@@ -5,8 +5,8 @@ author: Steven Paradise
 filename: SYMLINKS.md
 schema: "2.1"
 version: "2.7.0"
-date: 2026-06-14
-lastmod: 2026-06-14
+date: 2026-06-15
+lastmod: 2026-06-15
 type: reference
 tags:
   - governance/workspace
@@ -21,18 +21,18 @@ tags:
 
 ## Directory links (under governator/)
 
-Target prefix `../../diceman175-governator/symlink-src/` (two levels up from the link):
+Target prefix `../../diceman175-governator/symlink-target/` (two levels up from the link):
 
 | Symlink | Relative Path | Purpose |
 |---------|---------------|---------|
-| governator/audit | ../../diceman175-governator/symlink-src/audit | Audit and validation scripts |
-| governator/orchestrate | ../../diceman175-governator/symlink-src/orchestrate | Orchestration and automation workflows |
-| governator/permissions | ../../diceman175-governator/symlink-src/permissions | AI automation and CI/CD permissions |
-| governator/procedures | ../../diceman175-governator/symlink-src/procedures | Standard operating procedures and runbooks |
-| governator/schemas | ../../diceman175-governator/symlink-src/schemas | Metadata schemas and governed types |
-| governator/scripts | ../../diceman175-governator/symlink-src/scripts | Governance and automation scripts |
-| governator/standards | ../../diceman175-governator/symlink-src/standards | Naming, encoding, version, and other standards |
-| governator/templates | ../../diceman175-governator/symlink-src/templates | File templates for code, markdown, etc. |
+| governator/audit | ../../diceman175-governator/symlink-target/audit | Audit and validation scripts |
+| governator/orchestrate | ../../diceman175-governator/symlink-target/orchestrate | Orchestration and automation workflows |
+| governator/permissions | ../../diceman175-governator/symlink-target/permissions | AI automation and CI/CD permissions |
+| governator/procedures | ../../diceman175-governator/symlink-target/procedures | Standard operating procedures and runbooks |
+| governator/schemas | ../../diceman175-governator/symlink-target/schemas | Metadata schemas and governed types |
+| governator/scripts | ../../diceman175-governator/symlink-target/scripts | Governance and automation scripts |
+| governator/standards | ../../diceman175-governator/symlink-target/standards | Naming, encoding, version, and other standards |
+| governator/templates | ../../diceman175-governator/symlink-target/templates | File templates for code, markdown, etc. |
 
 ## File links (repo root)
 
@@ -40,19 +40,19 @@ Target prefix `../diceman175-governator/` (one level up from the link):
 
 | Symlink | Relative Path | Purpose |
 |---------|---------------|---------|
-| metadata-tags.yaml | ../diceman175-governator/symlink-src/schemas/metadata-tags/metadata-tags.yaml | Controlled vocabulary of A6 tags |
-| metadata-fields.yaml | ../diceman175-governator/symlink-src/schemas/metadata-fields/metadata-fields.yaml | Schema 2.1 metadata field definitions |
-| AI-AUTOMATION-PERMISSIONS.md | ../diceman175-governator/symlink-src/permissions/ai-automation/AI-AUTOMATION-PERMISSIONS.md | AI agent permission policy |
-| WORKSPACE-NAMING-STANDARD.md | ../diceman175-governator/symlink-src/standards/workspace/naming/WORKSPACE-NAMING-STANDARD.md | Kebab-case and naming convention standard |
-| WORKSPACE-ENCODING-STANDARD.md | ../diceman175-governator/symlink-src/standards/workspace/encoding/WORKSPACE-ENCODING-STANDARD.md | UTF-8 and CRLF/LF encoding standard |
-| WORKSPACE-VERSION-STANDARD.md | ../diceman175-governator/symlink-src/standards/workspace/version/WORKSPACE-VERSION-STANDARD.md | .version file and semantic versioning standard |
+| metadata-tags.yaml | ../diceman175-governator/symlink-target/schemas/metadata-tags/metadata-tags.yaml | Controlled vocabulary of A6 tags |
+| metadata-fields.yaml | ../diceman175-governator/symlink-target/schemas/metadata-fields/metadata-fields.yaml | Schema 2.1 metadata field definitions |
+| AI-AUTOMATION-PERMISSIONS.md | ../diceman175-governator/symlink-target/permissions/ai-automation/AI-AUTOMATION-PERMISSIONS.md | AI agent permission policy |
+| WORKSPACE-NAMING-STANDARD.md | ../diceman175-governator/symlink-target/standards/workspace/naming/WORKSPACE-NAMING-STANDARD.md | Kebab-case and naming convention standard |
+| WORKSPACE-ENCODING-STANDARD.md | ../diceman175-governator/symlink-target/standards/workspace/encoding/WORKSPACE-ENCODING-STANDARD.md | UTF-8 and CRLF/LF encoding standard |
+| WORKSPACE-VERSION-STANDARD.md | ../diceman175-governator/symlink-target/standards/workspace/version/WORKSPACE-VERSION-STANDARD.md | .version file and semantic versioning standard |
 
 ## Symlink Architecture
 
 These symlinks use **relative paths** instead of absolute paths:
 
-- **Directory links:** `../../diceman175-governator/symlink-src/{subfolder}` (from `governator/`, two levels up)
-- **Root file links:** `../diceman175-governator/symlink-src/{path}` (from the repo root, one level up)
+- **Directory links:** `../../diceman175-governator/symlink-target/{subfolder}` (from `governator/`, two levels up)
+- **Root file links:** `../diceman175-governator/symlink-target/{path}` (from the repo root, one level up)
 - **Portable:** the workspace can relocate without breaking links
 - **Consistent:** all repos use the same pattern
 

@@ -5,8 +5,8 @@ author: Steven Paradise
 filename: README.md
 schema: "2.1"
 version: "2.7.0"
-date: 2026-06-14
-lastmod: 2026-06-14
+date: 2026-06-15
+lastmod: 2026-06-15
 type: reference
 tags:
   - governance/workspace
@@ -41,8 +41,8 @@ Symbolic links (using **relative paths**) to the centralized governance reposito
 
 ## Symlink Details
 
-Directory links use `../../diceman175-governator/symlink-src/{subfolder}` (two levels up, from `governator/`).
-Root file links use `../diceman175-governator/symlink-src/{path}` (one level up, from the repo root).
+Directory links use `../../diceman175-governator/symlink-target/{subfolder}` (two levels up, from `governator/`).
+Root file links use `../diceman175-governator/symlink-target/{path}` (one level up, from the repo root).
 All targets are relative for portability across machines and directory relocations.
 
 See [SYMLINKS.md](./SYMLINKS.md) for the detailed manifest.

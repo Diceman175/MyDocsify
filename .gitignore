@@ -24,3 +24,13 @@
 
 __pycache__/
 *.py[cod]
+
+# Governance artifacts - provided locally via symlinks (home) or
+# remote-only-copy-governance-files.ps1 (restricted machines). Never committed.
+/governator/
+/AI-AUTOMATION-PERMISSIONS.md
+/WORKSPACE-NAMING-STANDARD.md
+/WORKSPACE-VERSION-STANDARD.md
+/WORKSPACE-ENCODING-STANDARD.md
+/metadata-fields.yaml
+/metadata-tags.yaml

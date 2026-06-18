@@ -1,1 +1,0 @@
-../diceman175-governator/symlink-target/standards/workspace/naming/WORKSPACE-NAMING-STANDARD.md

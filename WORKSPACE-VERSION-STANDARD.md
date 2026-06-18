@@ -1,1 +1,0 @@
-../diceman175-governator/symlink-target/standards/workspace/version/WORKSPACE-VERSION-STANDARD.md

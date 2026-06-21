@@ -34,3 +34,6 @@ __pycache__/
 /WORKSPACE-ENCODING-STANDARD.md
 /metadata-fields.yaml
 /metadata-tags.yaml
+# Claude Code local state - never share machine-specific config
+.claude/settings.local.json
+.claude/.credentials.json

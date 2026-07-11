@@ -37,3 +37,17 @@ __pycache__/
 # Claude Code local state - never share machine-specific config
 .claude/settings.local.json
 .claude/.credentials.json
+
+# Secrets / credentials (workspace-wide failsafe)
+.env
+.env.local
+.env.*.local
+*.pem
+*.p12
+*.pfx
+*.key
+id_rsa
+id_ed25519
+*credentials*.json
+secrets.yaml
+secrets.yml

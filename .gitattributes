@@ -2,7 +2,7 @@
 # Diceman175 Workspace - Git Attributes (canonical source)
 # ------------------------------------------------------------
 # Real file lives at:
-#   diceman175-governator/standards/workspace/git/.gitattributes
+#   governator175/standards/workspace/git/.gitattributes
 # Symlinked into every repo root (not the workspace root - it has no .git).
 #
 # Line-ending policy here MUST stay in sync with:

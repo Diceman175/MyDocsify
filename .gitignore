@@ -28,12 +28,12 @@ __pycache__/
 # Governance artifacts - provided locally via symlinks (home) or
 # remote-only-copy-governance-files.ps1 (restricted machines). Never committed.
 /governator/
-/AI-AUTOMATION-PERMISSIONS.md
-/WORKSPACE-NAMING-STANDARD.md
-/WORKSPACE-VERSION-STANDARD.md
-/WORKSPACE-ENCODING-STANDARD.md
-/metadata-fields.yaml
-/metadata-tags.yaml
+/A1-AI-AUTOMATION-PERMISSIONS.md
+/A2-WORKSPACE-NAMING-STANDARD.md
+/A4-A8-WORKSPACE-VERSION-STANDARD.md
+/A10-WORKSPACE-ENCODING-STANDARD.md
+/A3-metadata-fields.yaml
+/A6-metadata-tags.yaml
 # Claude Code local state - never share machine-specific config
 .claude/settings.local.json
 .claude/.credentials.json

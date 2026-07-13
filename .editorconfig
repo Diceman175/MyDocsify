@@ -2,7 +2,7 @@
 # Diceman175 Workspace - EditorConfig (canonical source)
 # ------------------------------------------------------------
 # Real file lives at:
-#   diceman175-governator/standards/workspace/formatting/.editorconfig
+#   governator175/standards/workspace/formatting/.editorconfig
 # Symlinked to the workspace root and to every repo root.
 #
 # Line-ending and charset policy here MUST stay in sync with:

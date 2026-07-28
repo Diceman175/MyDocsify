@@ -2,12 +2,13 @@
 # Diceman175 Workspace - EditorConfig (canonical source)
 # ------------------------------------------------------------
 # Real file lives at:
-#   governator175/standards/workspace/formatting/.editorconfig
-# Symlinked to the workspace root and to every repo root.
+#   governator175/symlink-target/root-files/.editorconfig
+# Distributed as a real committed copy to the workspace root and to every
+# repo root by governator175/symlink-target/scripts/rules/a11-formatting/sync-editorconfig.ps1
 #
 # Line-ending and charset policy here MUST stay in sync with:
-#   - standards/workspace/git/.gitattributes  (commit-layer enforcement)
-#   - WORKSPACE-ENCODING-STANDARD.md           (the governing standard)
+#   - symlink-target/root-files/.gitattributes                          (commit-layer enforcement)
+#   - symlink-target/standards/rules/a10-encoding/A10-WORKSPACE-ENCODING-STANDARD.md  (the governing standard)
 # EditorConfig governs the editor layer; .gitattributes governs the
 # commit layer. They are complementary, not duplicative.
 # ============================================================
@@ -20,6 +21,10 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
+
+# Markdown: preserve hard-break trailing spaces
+[*.md]
+trim_trailing_whitespace = false
 
 # PowerShell: UTF-8 with BOM, CRLF (Windows convention)
 [*.{ps1,psm1,psd1}]
@@ -34,5 +39,7 @@ end_of_line = crlf
 end_of_line = crlf
 
 # Makefiles require literal tabs
-[Makefile]
+[{Makefile,makefile,GNUmakefile,*.mk}]
 indent_style = tab
+indent_size = tab
+trim_trailing_whitespace = false

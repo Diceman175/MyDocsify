@@ -2,12 +2,14 @@
 # Diceman175 Workspace - Git Attributes (canonical source)
 # ------------------------------------------------------------
 # Real file lives at:
-#   governator175/standards/workspace/git/.gitattributes
-# Symlinked into every repo root (not the workspace root - it has no .git).
+#   governator175/symlink-target/root-files/.gitattributes
+# Distributed as a real committed copy into every repo root, and as a real
+# (non-committed) copy at the workspace root, by
+# governator175/symlink-target/scripts/rules/a12-git-attributes/sync-gitattributes.ps1
 #
 # Line-ending policy here MUST stay in sync with:
-#   - standards/workspace/formatting/.editorconfig  (editor-layer guidance)
-#   - WORKSPACE-ENCODING-STANDARD.md                 (the governing standard)
+#   - symlink-target/root-files/.editorconfig                            (editor-layer guidance)
+#   - symlink-target/standards/rules/a10-encoding/A10-WORKSPACE-ENCODING-STANDARD.md  (the governing standard)
 # .gitattributes governs normalization at commit time; .editorconfig
 # guides editors. Note: git cannot enforce UTF-8 BOM - BOM is enforced
 # by .editorconfig charset and tools/utilities/check-encodings.ps1.

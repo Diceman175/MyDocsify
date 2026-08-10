@@ -5,7 +5,7 @@
 #   governator175/symlink-target/root-files/.gitattributes
 # Distributed as a real committed copy into every repo root, and as a real
 # (non-committed) copy at the workspace root, by
-# governator175/symlink-target/scripts/rules/a12-git-attributes/sync-gitattributes.ps1
+# governator175/symlink-target/scripts/rules/a12-git-attributes/sync-git-infrastructure.ps1
 #
 # Line-ending policy here MUST stay in sync with:
 #   - symlink-target/root-files/.editorconfig                            (editor-layer guidance)

@@ -1,29 +1,51 @@
-### Mac Computer ###
-.DS_Store
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-# End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
-
-__pycache__/
-*.py[cod]
+# ============================================================
+# Diceman175 Workspace - Git Ignore (canonical source)
+# ------------------------------------------------------------
+# Real file lives at:
+#   governator175/symlink-target/root-files/.gitignore
+# Distributed as a real committed copy into every repo root, and as a real
+# (non-committed) copy at the workspace root, by
+# governator175/symlink-target/scripts/rules/a12-git-attributes/sync-git-infrastructure.ps1
+#
+# This is the REPO-COMMITTED baseline every clone, collaborator, and CI run
+# sees. It is distinct from two other .gitignore-adjacent files that stay
+# out of A12's scope on purpose:
+#   - symlink-target/github/config/gitignore   - machine-local core.excludesFile;
+#     applies only on this machine, never committed, never seen by a clone.
+#   - symlink-target/templates/git/template-gitignore - a fill-in-the-blanks
+#     starter for brand-new repos (has {{placeholders}}), not synced content.
+#
+# EVIDENCE BASE (2026-08-10): built from a pattern-frequency analysis of the
+# 20 existing per-repo .gitignore files already in the workspace (see
+# TEMP/a12-git-infrastructure/gitignore-pattern-frequency-analysis.csv).
+# The governance-symlink, .claude/.vscode, and secrets blocks are copied
+# verbatim from the two most current hand-maintained files (Neural-Net and
+# governator175's own .gitignore). The Node.js/Python blocks are the near-
+# complete union of what 5 of the 20 repos (Scripts, epub2Audiobook, mjpb,
+# My-Jira-Prompt-Builder, My-Research-and-Action-Hub) already carry verbatim
+# from the standard gitignore.io templates - folded in wholesale on
+# 2026-08-10 after a real coverage check showed the first (trimmed) version
+# of this file would have dropped real, in-use patterns from those repos.
+#
+# DELIBERATELY EXCLUDED as repo-specific, not master material (checked
+# against real per-repo content, not guessed):
+#   - Named-project paths/negations: rag-corpus-tools/*, !rag-corpus-tools/...,
+#     scripts/sync.log, _session-logs/ (MTBank); mlx-env/ (repo-specific venv name)
+#   - governator175-internal runtime paths: governator/logs/, audit/reports/*.csv,
+#     endoskeleton/claude-code/.claude/audit/, symlink-target/scripts/.../logs/
+#   - Neural-Net's own /plans/ (repo-root path specific to how that repo lays
+#     out planning docs - NOT the same as project-genisys/01-cyberdyne-concepts/,
+#     which is the actual tracked plans tree and must never be ignored)
+#   - /pgdata/, /server/exports/, /*.png (single-repo, narrow purpose)
+#   - *.mp3 - would actively break epub2Audiobook, which intentionally commits
+#     audio fixtures/output
+#
+# Known limitation: like .gitattributes/.editorconfig/.markdownlint.json,
+# this file must be byte-identical across every repo to pass -Mode Check.
+# A repo needing a genuinely one-off ignore rule outside the categories
+# above will show as permanent drift - accepted, same tension already
+# exists for the other three A12-governed files.
+# ============================================================
 
 # Governance artifacts - provided locally via symlinks (home) or
 # remote-only-copy-governance-files.ps1 (restricted machines). Never committed.
@@ -34,11 +56,28 @@ __pycache__/
 /A10-WORKSPACE-ENCODING-STANDARD.md
 /A3-metadata-fields.yaml
 /A6-metadata-tags.yaml
-# Claude Code local state - never share machine-specific config
+
+# Governance files fully copied locally on work computers (setup.ps1) instead
+# of symlinked - primary/home machine uses symlinks, so these paths normally
+# don't exist there. See CLAUDE.md's "Local-Only Files" / work-computer notes.
+/standards/
+/schemas/
+
+# Claude Code / VS Code local state - never share machine-specific config
 .claude/settings.local.json
 .claude/.credentials.json
+.claude/worktrees/
+.superpowers/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.idea/
+*.iml
 
-# Secrets / credentials (workspace-wide failsafe)
+# Secrets & credentials - NEVER commit these
 .env
 .env.local
 .env.*.local
@@ -51,3 +90,220 @@ id_ed25519
 *credentials*.json
 secrets.yaml
 secrets.yml
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+~$*
+
+# Local backup archives - DECISION (2026-08-10): .archive/ folders hold
+# point-in-time backups managed by HashCheck + workspace-backup.cmd
+# (Neural-Net\scripts\powershell\file-integrity\workspace-backup\workspace-backup.cmd),
+# NOT by git. They must never enter git history or get pushed to GitHub.
+# Before this rule existed, some repos (Neural-Net, MTBank) had already
+# committed .archive/ content - those were untracked with `git rm --cached`
+# alongside adding this line; the files remain on disk, just no longer
+# tracked. This does not rewrite existing history in those repos.
+.archive/
+
+# ============================================================
+# Node.js (github/gitignore Node.gitignore template - near-verbatim union
+# of what Scripts, epub2Audiobook, mjpb, My-Jira-Prompt-Builder, and
+# My-Research-and-Action-Hub already carry)
+# ============================================================
+node_modules/
+jspm_packages/
+web_modules/
+bower_components
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.pnpm-store
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn-integrity
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+coverage
+*.lcov
+.nyc_output
+.grunt
+.node_repl_history
+*.tgz
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.cache
+.parcel-cache
+.next
+.nuxt
+dist-ssr
+.vuepress/dist
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+.vite/
+.output
+*.tsbuildinfo
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+**/.vitepress/cache
+**/.vitepress/dist
+
+# ============================================================
+# Python (github/gitignore Python.gitignore template - near-verbatim union
+# of the same 5 repos)
+# ============================================================
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.mo
+*.pot
+instance/
+.webassets-cache
+target/
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+.pdm-python
+.pdm-build/
+__pypackages__/
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+.venv
+.venv*/
+venv/
+venv.bak/
+env/
+env.bak/
+ENV/
+.spyderproject
+.spyproject
+.ropeproject
+/site
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+.ruff_cache/
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+.abstra/
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# ============================================================
+# Misc build/dev tooling
+# ============================================================
+*.tmp
+*.sqlite3
+*.log
+*.local
+logs/
+out/
+dist
+build/Release
+test-results/
+playwright-report/
+.temp
+.firebase/
+.svelte-kit/
+.pnp.*
+.lock-wscript
+*.sw?
+*.suo
+*.sln
+*.njsproj
+*.ntvs*
+.env.*
+!.env.example
+docker-compose.override.yml
+.playwright-mcp/
+
+# Recurring workspace convention - a "reference material, not for git" folder
+ref/
+
+# Compiled binaries / installers / raw archives - never source-controlled
+*.exe
+*.deb
+*.msi
+*.jar
+*.sig
+*.tar
+*.tar.*
+*.zip
+*.url
+*.log.*
+
+# HuggingFace model cache (large, should live outside repo)
+.cache/huggingface/
+
+# Checksums (maintained manually via HashCheck - never auto-regenerated)
+# NOT ignored - these must be tracked. Listed here as a reminder not to delete.
+# checksums.sha3-512

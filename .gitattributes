@@ -18,6 +18,11 @@
 # Default: treat files as text, normalize to LF on commit
 * text=auto eol=lf
 
+# POSIX / macOS Shell Scripts: strictly enforce LF across all platforms
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.zsh   text eol=lf
+
 # Windows-native file types: keep CRLF in the working tree
 *.ps1   text eol=crlf
 *.psm1  text eol=crlf
@@ -50,3 +55,6 @@
 *.xlsx  binary
 *.docx  binary
 *.pptx  binary
+*.icns  binary
+*.dmg   binary
+*.pkg   binary

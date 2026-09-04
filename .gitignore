@@ -91,12 +91,24 @@ id_ed25519
 secrets.yaml
 secrets.yml
 
-# Operating System
+# Operating System - macOS
 .DS_Store
 .DS_Store?
 ._*
+.AppleDouble
+.LSOverride
 .Spotlight-V100
 .Trashes
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.apdisk
+.localized
+.zsh_sessions/
+*.dylib
+
+# Operating System - Windows
 Thumbs.db
 Thumbs.db:encryptable
 desktop.ini
@@ -298,6 +310,8 @@ ref/
 *.tar
 *.tar.*
 *.zip
+!root-temp/symlink-target.zip
+!root-temp/*.zip
 *.url
 *.log.*
 

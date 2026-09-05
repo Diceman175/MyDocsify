@@ -321,3 +321,18 @@ ref/
 # Checksums (maintained manually via HashCheck - never auto-regenerated)
 # NOT ignored - these must be tracked. Listed here as a reminder not to delete.
 # checksums.sha3-512
+
+# Sidecar settings files (*.settings.jsonc) - DECISION (2026-09-05): several
+# tools write their own current settings back to a <tool-name>.settings.jsonc
+# sidecar next to themselves at runtime (e.g. a "PersistSettings"/"persist
+# settings" flag), so the file on disk is regenerated from whatever the last
+# invocation's flags/UI state were, not hand-authored. Untracked going
+# forward so a fresh sidecar (like confluence-image-factory's, discovered
+# never committed) doesn't show up as noise to add by accident.
+# NOTE: gitignore never untracks a file already committed (git does not
+# retroactively stop tracking a tracked path via .gitignore). Several tools
+# in Neural-Net (universal-archive-backup-validator, f5scope, view-csv-
+# interactive, git-safe-move-*, repo-clones-*, and others) intentionally
+# commit their .settings.jsonc as versioned state and keep doing so -
+# this rule only affects settings sidecars that aren't tracked yet.
+*.settings.jsonc

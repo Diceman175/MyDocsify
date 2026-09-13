@@ -125,6 +125,7 @@ $RECYCLE.BIN/
 # alongside adding this line; the files remain on disk, just no longer
 # tracked. This does not rewrite existing history in those repos.
 .archive/
+.encoding-archive/
 
 # ============================================================
 # Node.js (github/gitignore Node.gitignore template - near-verbatim union

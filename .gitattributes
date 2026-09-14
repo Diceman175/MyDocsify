@@ -45,6 +45,7 @@
 *.rar   binary
 *.7z    binary
 *.gz    binary
+*.whl   binary
 *.mp3   binary
 *.mp4   binary
 *.wav   binary

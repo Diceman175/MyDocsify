@@ -337,3 +337,14 @@ ref/
 # commit their .settings.jsonc as versioned state and keep doing so -
 # this rule only affects settings sidecars that aren't tracked yet.
 *.settings.jsonc
+
+# Run records (runs/) - DECISION (2026-10-17): a runs/ folder holds run
+# records - the dated copies a prompt template spawns, and the reports and
+# archives those runs produce (A4-A8 0.17.0 already keeps runs/ out of
+# version scope). They are per-run output, not source, so new run records
+# stay on disk and out of git going forward.
+# NOTE: gitignore never untracks a file already committed. On 2026-10-17,
+# 157 run records were already tracked (Neural-Net 132, My-Confluence-Image-
+# Factory 20, Vector 2, Cybernetic-Based-Terminator 1); they stay tracked
+# until a separate `git rm --cached` decision in each repo.
+runs/

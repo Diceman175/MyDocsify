@@ -49,11 +49,15 @@
 
 # Governance artifacts - provided locally via symlinks (home) or
 # remote-only-copy-governance-files.ps1 (restricted machines). Never committed.
+# Must list every "files" entry in
+# scripts/onboarding/repo/symlinks/onboarding-repo-symlinks.config.jsonc;
+# symlinks/tests/onboarding-repo-symlinks.tests.ps1 fails when one is missing.
 /governator/
 /A1-AI-AUTOMATION-PERMISSIONS.md
 /A2-WORKSPACE-NAMING-STANDARD.md
 /A4-A8-WORKSPACE-VERSION-STANDARD.md
 /A10-WORKSPACE-ENCODING-STANDARD.md
+/A17-WORKSPACE-RUNTIME-TOOLCHAIN-STANDARD.md
 /A3-metadata-fields.yaml
 /A6-metadata-tags.yaml
 
@@ -348,3 +352,16 @@ ref/
 # Factory 20, Vector 2, Cybernetic-Based-Terminator 1); they stay tracked
 # until a separate `git rm --cached` decision in each repo.
 runs/
+
+# Remember plugin store (.remember/) - DECISION (2026-10-21): the Claude
+# Code remember plugin keeps per-project session memory under .remember/
+# (now.md, today-*.md, recent.md, archive.md, the remember.md handoff,
+# logs/, tmp/). It is machine-local session state, not source. The plugin
+# writes its own .remember/.gitignore (*), but that file ignores itself and
+# never reaches a clone, so this line is the committed backstop. A tracked
+# memory file is worse than noise: the plugin refuses to write any file the
+# repo's own index tracks, so a committed remember.md breaks /remember.
+# NOTE: gitignore never untracks a file already committed. On 2026-10-21,
+# two repos tracked .remember/remember.md (My-Confluence-Image-Factory,
+# Cybernetic-Based-Terminator); each needs its own `git rm --cached`.
+.remember/

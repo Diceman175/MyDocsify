@@ -1,1 +1,0 @@
-../governator175/symlink-target/standards/rules/a17-runtime-toolchain/A17-WORKSPACE-RUNTIME-TOOLCHAIN-STANDARD.md

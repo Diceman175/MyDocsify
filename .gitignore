@@ -83,8 +83,9 @@
 
 # Secrets & credentials - NEVER commit these
 .env
-.env.local
-.env.*.local
+# .env.* covers every variant, local ones included; .env.example is the committed template.
+.env.*
+!.env.example
 *.pem
 *.p12
 *.pfx
@@ -298,8 +299,6 @@ playwright-report/
 *.sln
 *.njsproj
 *.ntvs*
-.env.*
-!.env.example
 docker-compose.override.yml
 .playwright-mcp/
 

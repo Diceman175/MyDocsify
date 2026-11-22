@@ -96,6 +96,13 @@ id_ed25519
 secrets.yaml
 secrets.yml
 
+# Unsanitized working data (real names, real addresses) - never committed.
+# Unanchored on purpose: matches a sensitive/ folder at any depth, the same
+# reading as gate rule G7 of sanitize-rehydrate-rfc-compliance, which refuses
+# any tracked or staged path under it even after a forced add. Per-clone only;
+# no placeholder file can be committed inside it. Standard: A12.
+sensitive/
+
 # Operating System - macOS
 .DS_Store
 .DS_Store?

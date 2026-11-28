@@ -73,7 +73,7 @@ jobs:
           } elseif ($env:HAS_GOV_TOKEN -eq 'true') {
               $gov = Join-Path $env:GITHUB_WORKSPACE 'governator175'
           } else {
-              Write-Host '::warning title=A10 encoding check skipped::The GOVERNATOR_READ_TOKEN secret is not set in this repository, so the validator could not be fetched from governator175. Set the secret to turn the check on.'
+              Write-Host '::warning title=A10 encoding check not run::The GOVERNATOR_READ_TOKEN secret is not set in this repository, so the validator could not be fetched from governator175. Set the secret to turn the check on.'
               exit 0
           }
           $validator = Join-Path $gov 'symlink-target/scripts/rules/a10-encoding/encoding-standards.ps1'

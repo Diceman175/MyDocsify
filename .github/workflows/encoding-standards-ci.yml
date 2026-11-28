@@ -1,0 +1,137 @@
+# A10 encoding check for pull requests.
+# Canonical copy: governator175/symlink-target/scripts/workflows/encoding-standards-ci-template.yml.
+# Each repository holds a real copy at .github/workflows/encoding-standards-ci.yml (GitHub does not
+# run a symlinked workflow), kept aligned by sync-encoding-workflow.ps1 beside the canonical copy.
+# Edit the canonical copy, never a repository's copy: the next sync overwrites it.
+#
+# - pull_request: checks only the files the pull request adds or changes, so old violations
+#   elsewhere in the repository never fail an unrelated pull request. Violations fail the job and
+#   are annotated on the file.
+# - schedule and workflow_dispatch: a full scan of the default branch that warns and never fails.
+# - Outside governator175 the validator comes from a sparse checkout of governator175 (a private
+#   repository) with the GOVERNATOR_READ_TOKEN secret, a fine-grained token with read access to
+#   governator175 contents only. Without the secret the job warns and passes.
+name: Encoding Standards Validation
+
+on:
+  pull_request:
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: encoding-standards-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  encoding-validation:
+    name: Validate Encoding Standards
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      HAS_GOV_TOKEN: ${{ secrets.GOVERNATOR_READ_TOKEN != '' }}
+      IS_GOVERNATOR: ${{ github.repository == 'Diceman175/governator175' }}
+
+    steps:
+      - name: Enable Windows long paths
+        shell: pwsh
+        run: git config --system core.longpaths true
+
+      - name: Check out this repository
+        uses: actions/checkout@v6
+        with:
+          path: repo
+          # The pull_request checkout is the merge commit; depth 2 brings its first parent, the base.
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Check out the validator from governator175
+        if: env.IS_GOVERNATOR != 'true' && env.HAS_GOV_TOKEN == 'true'
+        uses: actions/checkout@v6
+        with:
+          repository: Diceman175/governator175
+          token: ${{ secrets.GOVERNATOR_READ_TOKEN }}
+          path: governator175
+          persist-credentials: false
+          sparse-checkout: |
+            symlink-target/scripts/rules/a10-encoding
+            symlink-target/standards/rules/a10-encoding
+
+      - name: Validate encoding
+        shell: pwsh
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $repo = Join-Path $env:GITHUB_WORKSPACE 'repo'
+
+          if ($env:IS_GOVERNATOR -eq 'true') {
+              $gov = $repo
+          } elseif ($env:HAS_GOV_TOKEN -eq 'true') {
+              $gov = Join-Path $env:GITHUB_WORKSPACE 'governator175'
+          } else {
+              Write-Host '::warning title=A10 encoding check skipped::The GOVERNATOR_READ_TOKEN secret is not set in this repository, so the validator could not be fetched from governator175. Set the secret to turn the check on.'
+              exit 0
+          }
+          $validator = Join-Path $gov 'symlink-target/scripts/rules/a10-encoding/encoding-standards.ps1'
+          if (-not (Test-Path -LiteralPath $validator)) {
+              Write-Host "::error title=A10 encoding check::Validator not found: $validator"
+              exit 2
+          }
+
+          $fullScan = $env:EVENT_NAME -ne 'pull_request'
+          if ($fullScan) {
+              $scanPath = $repo
+          } else {
+              # The merge commit against its first parent (the base) is exactly the pull request's change.
+              $changed = @(git -C $repo -c core.quotepath=false diff --name-only --diff-filter=ACMR 'HEAD^1' HEAD)
+              if ($LASTEXITCODE -ne 0) {
+                  Write-Host '::error title=A10 encoding check::git diff against the merge base failed.'
+                  exit 2
+              }
+              $changed = @($changed | Where-Object { $_ })
+              if ($changed.Count -eq 0) {
+                  Write-Host 'No added or changed files to check.'
+                  exit 0
+              }
+              # Copy the changed files, bytes untouched, under their repository-relative paths, so the
+              # validator's folder exclusions (.github, templates, .archive and the rest) still apply.
+              $scanPath = Join-Path $env:RUNNER_TEMP 'a10-changed'
+              New-Item -ItemType Directory -Force -Path $scanPath | Out-Null
+              foreach ($rel in $changed) {
+                  $src = Join-Path $repo $rel
+                  if (-not (Test-Path -LiteralPath $src -PathType Leaf)) { continue }
+                  $dst = Join-Path $scanPath $rel
+                  New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dst) | Out-Null
+                  Copy-Item -LiteralPath $src -Destination $dst
+              }
+              Write-Host "Checking $($changed.Count) added or changed file(s)."
+          }
+
+          $lines = @(& pwsh -NoProfile -File $validator -DryRun -ExportCsv -NoSidecar -ScanPath $scanPath 2>&1)
+          $code = $LASTEXITCODE
+          $lines | ForEach-Object { Write-Host $_ }
+
+          $csvLine = $lines | ForEach-Object { "$_" } | Where-Object { $_ -match '^Results exported to:\s*(.+\.csv)\s*$' } | Select-Object -Last 1
+          if ($csvLine -and ($csvLine -match '^Results exported to:\s*(.+\.csv)\s*$') -and (Test-Path -LiteralPath $Matches[1])) {
+              $level = if ($fullScan) { 'warning' } else { 'error' }
+              foreach ($v in @(Import-Csv -LiteralPath $Matches[1] | Where-Object Status -eq 'Violation')) {
+                  $rel = $v.FilePath.Substring($scanPath.Length).TrimStart('\', '/').Replace('\', '/')
+                  Write-Host "::$level file=$rel,title=A10 encoding::$($v.Actual), expected $($v.Expected)"
+              }
+          }
+
+          if ($code -eq 0) { exit 0 }
+          if ($code -eq 1) {
+              if ($fullScan) {
+                  Write-Host '::warning title=A10 encoding::Violations found by the full scan (monitor-only; this run passes).'
+                  exit 0
+              }
+              Write-Host '::error title=A10 encoding::Fix with: pwsh -NoProfile -File encoding-standards.ps1 -ApplyFix -ScanPath <file>'
+              exit 1
+          }
+          Write-Host "::error title=A10 encoding check::The validator failed (exit $code)."
+          exit 2

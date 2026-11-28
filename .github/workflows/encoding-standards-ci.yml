@@ -33,7 +33,7 @@ jobs:
     timeout-minutes: 15
     env:
       HAS_GOV_TOKEN: ${{ secrets.GOVERNATOR_READ_TOKEN != '' }}
-      IS_GOVERNATOR: ${{ github.repository == 'Diceman175/governator175' }}
+      IS_GOVERNATOR: ${{ github.repository == format('{0}/governator175', github.repository_owner) }}
 
     steps:
       - name: Enable Windows long paths
@@ -52,7 +52,7 @@ jobs:
         if: env.IS_GOVERNATOR != 'true' && env.HAS_GOV_TOKEN == 'true'
         uses: actions/checkout@v6
         with:
-          repository: Diceman175/governator175
+          repository: ${{ github.repository_owner }}/governator175
           token: ${{ secrets.GOVERNATOR_READ_TOKEN }}
           path: governator175
           persist-credentials: false
